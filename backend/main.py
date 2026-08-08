@@ -16,10 +16,23 @@ from .decision_engine import calculate_decisions
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DIR = PROJECT_ROOT / "backend" / "output"
-SUMMARY_PATH = OUTPUT_DIR / "summary.json"
-RISK_METRICS_PATH = OUTPUT_DIR / "risk_metrics.json"
-PROCESS_PATH = OUTPUT_DIR / "process_analysis.csv"
+
+
+def get_output_dir() -> Path:
+    """Resolve output directory across local dev, Uvicorn, and Vercel serverless environments."""
+    candidates = [
+        PROJECT_ROOT / "backend" / "output",
+        Path(__file__).resolve().parent / "output",
+        Path.cwd() / "backend" / "output",
+        Path.cwd() / "output",
+        Path("/var/task/backend/output"),
+        Path("/var/task/output"),
+    ]
+    for candidate in candidates:
+        if (candidate / "summary.json").exists():
+            return candidate
+    return candidates[0]
+
 
 app = FastAPI(title="FinOps Intelligence API", version="1.0.0")
 app.add_middleware(
@@ -45,14 +58,19 @@ async def add_no_cache_headers(request: Request, call_next: Any) -> Response:
 @lru_cache(maxsize=1)
 def load_artifacts() -> tuple[dict[str, Any], dict[str, Any], pd.DataFrame]:
     """Load existing pipeline artifacts once per server process."""
-    missing = [str(path) for path in [SUMMARY_PATH, RISK_METRICS_PATH, PROCESS_PATH] if not path.exists()]
+    output_dir = get_output_dir()
+    summary_path = output_dir / "summary.json"
+    risk_metrics_path = output_dir / "risk_metrics.json"
+    process_path = output_dir / "process_analysis.csv"
+
+    missing = [str(path) for path in [summary_path, risk_metrics_path, process_path] if not path.exists()]
     if missing:
         raise FileNotFoundError(f"Required analytics artifacts are missing: {', '.join(missing)}")
-    with SUMMARY_PATH.open(encoding="utf-8") as handle:
+    with summary_path.open(encoding="utf-8") as handle:
         summary = json.load(handle)
-    with RISK_METRICS_PATH.open(encoding="utf-8") as handle:
+    with risk_metrics_path.open(encoding="utf-8") as handle:
         risk_metrics = json.load(handle)
-    process_df = pd.read_csv(PROCESS_PATH)
+    process_df = pd.read_csv(process_path)
     return summary, risk_metrics, process_df
 
 
