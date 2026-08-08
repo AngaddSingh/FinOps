@@ -10,8 +10,20 @@
       "destination": "/api/index.py"
     },
     {
-      "source": "/(.*)",
-      "destination": "/frontend/$1"
+      "source": "/",
+      "destination": "/frontend/index.html"
+    },
+    {
+      "source": "/css/:path*",
+      "destination": "/frontend/css/:path*"
+    },
+    {
+      "source": "/js/:path*",
+      "destination": "/frontend/js/:path*"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/frontend/:path*"
     }
   ]
 }
