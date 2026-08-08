@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Large datasets
+data/*.csv
+*.zip
+
+# Trained models
+models/*.joblib
+models/*.pkl
+
+# Large generated outputs
+backend/output/*.csv
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/

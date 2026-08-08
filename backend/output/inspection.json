@@ -1,0 +1,122 @@
+{
+  "row_count": 6362620,
+  "columns": [
+    "step",
+    "type",
+    "amount",
+    "nameOrig",
+    "oldbalanceOrg",
+    "newbalanceOrig",
+    "nameDest",
+    "oldbalanceDest",
+    "newbalanceDest",
+    "isFraud",
+    "isFlaggedFraud"
+  ],
+  "missing_values": {
+    "step": 0,
+    "type": 0,
+    "amount": 0,
+    "nameOrig": 0,
+    "oldbalanceOrg": 0,
+    "newbalanceOrig": 0,
+    "nameDest": 0,
+    "oldbalanceDest": 0,
+    "newbalanceDest": 0,
+    "isFraud": 0,
+    "isFlaggedFraud": 0
+  },
+  "transaction_types": {
+    "CASH_OUT": 2237500,
+    "PAYMENT": 2151495,
+    "CASH_IN": 1399284,
+    "TRANSFER": 532909,
+    "DEBIT": 41432
+  },
+  "fraud_distribution": {
+    "0": 6354407,
+    "1": 8213
+  },
+  "basic_statistics": {
+    "step": {
+      "count": 6362620.0,
+      "mean": 243.3972456315,
+      "std": 142.3319710491,
+      "min": 1.0,
+      "25%": 156.0,
+      "50%": 239.0,
+      "75%": 335.0,
+      "max": 743.0
+    },
+    "amount": {
+      "count": 6362620.0,
+      "mean": 179861.9035491307,
+      "std": 603858.2314629357,
+      "min": 0.0,
+      "25%": 13389.57,
+      "50%": 74871.94,
+      "75%": 208721.4775,
+      "max": 92445516.64
+    },
+    "oldbalanceOrg": {
+      "count": 6362620.0,
+      "mean": 833883.1040744866,
+      "std": 2888242.6730375565,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 14208.0,
+      "75%": 107315.175,
+      "max": 59585040.37
+    },
+    "newbalanceOrig": {
+      "count": 6362620.0,
+      "mean": 855113.6685785886,
+      "std": 2924048.502954266,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 144258.41,
+      "max": 49585040.37
+    },
+    "oldbalanceDest": {
+      "count": 6362620.0,
+      "mean": 1100701.666519649,
+      "std": 3399180.1129944758,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 132705.665,
+      "75%": 943036.7075,
+      "max": 356015889.35
+    },
+    "newbalanceDest": {
+      "count": 6362620.0,
+      "mean": 1224996.3982019294,
+      "std": 3674128.9421196375,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 214661.44,
+      "75%": 1111909.25,
+      "max": 356179278.92
+    },
+    "isFraud": {
+      "count": 6362620.0,
+      "mean": 0.0012908204,
+      "std": 0.0359047968,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 0.0,
+      "max": 1.0
+    },
+    "isFlaggedFraud": {
+      "count": 6362620.0,
+      "mean": 2.5147e-06,
+      "std": 0.0015857747,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 0.0,
+      "max": 1.0
+    }
+  }
+}

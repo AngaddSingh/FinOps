@@ -1,0 +1,354 @@
+{
+  "model": "RandomForestClassifier",
+  "features_used": [
+    "amount",
+    "transaction_hour",
+    "transaction_amount_log",
+    "type",
+    "amount_bucket",
+    "transaction_category"
+  ],
+  "excluded_features": [
+    "isFraud",
+    "isFlaggedFraud",
+    "oldbalanceOrg",
+    "newbalanceOrig",
+    "oldbalanceDest",
+    "newbalanceDest",
+    "nameOrig",
+    "nameDest"
+  ],
+  "class_imbalance_strategy": "class_weight=balanced_subsample; no pre-split oversampling",
+  "random_state": 42,
+  "model_sample_rows": 1000000,
+  "training_samples": 800000,
+  "test_samples": 200000,
+  "training_fraud_count": 6570,
+  "test_fraud_count": 1643,
+  "precision": 0.7007700770077008,
+  "recall": 0.3877054169202678,
+  "f1": 0.4992163009404389,
+  "roc_auc": 0.8665461124059283,
+  "pr_auc": 0.44329239233440665,
+  "confusion_matrix": [
+    [
+      198085,
+      272
+    ],
+    [
+      1006,
+      637
+    ]
+  ],
+  "risk_thresholds": {
+    "LOW": "risk_score < 0.3",
+    "MEDIUM": "0.3 <= risk_score < 0.7",
+    "HIGH": "risk_score >= 0.7"
+  },
+  "top_10_feature_importance": [
+    {
+      "feature": "numeric__amount",
+      "importance": 0.24380672309505863
+    },
+    {
+      "feature": "numeric__transaction_amount_log",
+      "importance": 0.23526034693703443
+    },
+    {
+      "feature": "numeric__transaction_hour",
+      "importance": 0.14473958680364138
+    },
+    {
+      "feature": "categorical__transaction_category_funds_movement",
+      "importance": 0.13712895058773966
+    },
+    {
+      "feature": "categorical__type_TRANSFER",
+      "importance": 0.0728126882785192
+    },
+    {
+      "feature": "categorical__type_PAYMENT",
+      "importance": 0.04201804124753505
+    },
+    {
+      "feature": "categorical__type_CASH_OUT",
+      "importance": 0.04034775513003083
+    },
+    {
+      "feature": "categorical__transaction_category_payment",
+      "importance": 0.027871001485863477
+    },
+    {
+      "feature": "categorical__type_CASH_IN",
+      "importance": 0.025579543336271587
+    },
+    {
+      "feature": "categorical__transaction_category_deposit",
+      "importance": 0.023266572856074363
+    }
+  ],
+  "synthetic_data_notice": "PaySim is synthetic data; risk results are for portfolio demonstration only.",
+  "risk_analytics": {
+    "total_transactions": 6362620,
+    "fraud_count": 8213,
+    "fraud_rate": 0.001290820448180152,
+    "high_risk_transaction_count": 12347,
+    "medium_risk_transaction_count": 59568,
+    "low_risk_transaction_count": 6290705,
+    "risk_distribution": {
+      "LOW": 6290705,
+      "MEDIUM": 59568,
+      "HIGH": 12347
+    },
+    "high_risk_transaction_volume": 27052648705.34,
+    "risk_by_transaction_type": [
+      {
+        "type": "CASH_IN",
+        "transaction_count": 1399284,
+        "transaction_volume": 236367391912.46,
+        "fraud_count": 0,
+        "high_risk_count": 0,
+        "average_risk_score": 1.182e-07,
+        "fraud_rate": 0.0
+      },
+      {
+        "type": "CASH_OUT",
+        "transaction_count": 2237500,
+        "transaction_volume": 394412995224.49,
+        "fraud_count": 4116,
+        "high_risk_count": 5117,
+        "average_risk_score": 0.0137191853,
+        "fraud_rate": 0.0018395531
+      },
+      {
+        "type": "DEBIT",
+        "transaction_count": 41432,
+        "transaction_volume": 227199221.28,
+        "fraud_count": 0,
+        "high_risk_count": 0,
+        "average_risk_score": 2.26689e-05,
+        "fraud_rate": 0.0
+      },
+      {
+        "type": "PAYMENT",
+        "transaction_count": 2151495,
+        "transaction_volume": 28093371138.37,
+        "fraud_count": 0,
+        "high_risk_count": 0,
+        "average_risk_score": 3.87e-08,
+        "fraud_rate": 0.0
+      },
+      {
+        "type": "TRANSFER",
+        "transaction_count": 532909,
+        "transaction_volume": 485291987263.17,
+        "fraud_count": 4097,
+        "high_risk_count": 7230,
+        "average_risk_score": 0.0723547532,
+        "fraud_rate": 0.0076879918
+      }
+    ],
+    "top_high_risk_transactions": [
+      {
+        "step": 10,
+        "type": "CASH_OUT",
+        "amount": 2662734.59,
+        "nameOrig": "C813115168",
+        "nameDest": "C401825929",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 12,
+        "type": "CASH_OUT",
+        "amount": 3964129.99,
+        "nameOrig": "C1098250442",
+        "nameDest": "C1140712423",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 13,
+        "type": "CASH_OUT",
+        "amount": 4022667.54,
+        "nameOrig": "C79951219",
+        "nameDest": "C1499489682",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 13,
+        "type": "CASH_OUT",
+        "amount": 2686564.04,
+        "nameOrig": "C901331326",
+        "nameDest": "C1662761228",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 13,
+        "type": "CASH_OUT",
+        "amount": 6188514.81,
+        "nameOrig": "C686187434",
+        "nameDest": "C1562904239",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 14,
+        "type": "CASH_OUT",
+        "amount": 2093951.47,
+        "nameOrig": "C1440901488",
+        "nameDest": "C166839225",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 14,
+        "type": "CASH_OUT",
+        "amount": 2927005.15,
+        "nameOrig": "C2010427735",
+        "nameDest": "C1887744176",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 14,
+        "type": "CASH_OUT",
+        "amount": 1832319.42,
+        "nameOrig": "C803703656",
+        "nameDest": "C858007309",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 16,
+        "type": "CASH_OUT",
+        "amount": 2701905.3,
+        "nameOrig": "C2140905252",
+        "nameDest": "C970796050",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 17,
+        "type": "CASH_OUT",
+        "amount": 1639676.27,
+        "nameOrig": "C967691562",
+        "nameDest": "C2093967426",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 18,
+        "type": "CASH_OUT",
+        "amount": 1974352.3,
+        "nameOrig": "C365968372",
+        "nameDest": "C579837876",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 19,
+        "type": "CASH_OUT",
+        "amount": 3477438.49,
+        "nameOrig": "C841995363",
+        "nameDest": "C1314676285",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 19,
+        "type": "CASH_OUT",
+        "amount": 10000000.0,
+        "nameOrig": "C2050703310",
+        "nameDest": "C1622860679",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 22,
+        "type": "CASH_OUT",
+        "amount": 1258956.71,
+        "nameOrig": "C673988903",
+        "nameDest": "C833477645",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 33,
+        "type": "CASH_OUT",
+        "amount": 3295227.84,
+        "nameOrig": "C1587398978",
+        "nameDest": "C1560573396",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 33,
+        "type": "CASH_OUT",
+        "amount": 10000000.0,
+        "nameOrig": "C29118015",
+        "nameDest": "C1379703840",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 33,
+        "type": "CASH_OUT",
+        "amount": 9887819.06,
+        "nameOrig": "C1071702423",
+        "nameDest": "C28783325",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 33,
+        "type": "CASH_OUT",
+        "amount": 6648389.9,
+        "nameOrig": "C1612816859",
+        "nameDest": "C836514715",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 35,
+        "type": "CASH_OUT",
+        "amount": 3606943.31,
+        "nameOrig": "C1011490419",
+        "nameDest": "C1919783086",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      },
+      {
+        "step": 35,
+        "type": "CASH_OUT",
+        "amount": 9465988.82,
+        "nameOrig": "C91276418",
+        "nameDest": "C1220805115",
+        "isFraud": 1,
+        "risk_score": 1.0,
+        "risk_level": "HIGH"
+      }
+    ]
+  }
+}

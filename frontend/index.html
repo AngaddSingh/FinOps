@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinOps Intelligence | Financial Operations & Risk Analytics</title>
+    
+    <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & Plus Jakarta Sans (Modern Sans-Serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js CDN for elegant institutional analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- TOP EXECUTIVE NAVIGATION -->
+    <header class="executive-header">
+        <div class="header-container">
+            <div class="brand-logo" onclick="switchTab('overview')">
+                <div class="logo-primary">FINOPS</div>
+                <div class="logo-secondary">INTELLIGENCE</div>
+            </div>
+            
+            <nav class="executive-nav" aria-label="Main Navigation">
+                <button class="nav-btn active" data-tab="overview" onclick="switchTab('overview')">Overview</button>
+                <button class="nav-btn" data-tab="risk" onclick="switchTab('risk')">Risk</button>
+                <button class="nav-btn" data-tab="process" onclick="switchTab('process')">Process</button>
+                <button class="nav-btn" data-tab="decisions" onclick="switchTab('decisions')">Decisions</button>
+            </nav>
+
+            <div class="header-status">
+                <span class="status-pulse"></span>
+                <span class="status-text">Analytics Active</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div id="data-error-state" class="api-error-banner" role="alert" style="display: none;">
+            <div class="error-banner-icon">⚠</div>
+            <div class="error-banner-content">
+                <div class="error-banner-title">Unable to load data</div>
+                <div class="error-banner-desc">FinOps Intelligence API unavailable — dashboard data not loaded. Please ensure backend is running at http://127.0.0.1:8000.</div>
+            </div>
+        </div>
+        
+        <!-- SECTION 1: OVERVIEW -->
+        <section id="tab-overview" class="content-tab active">
+            <!-- EDITORIAL HERO -->
+            <div class="editorial-hero">
+                <div class="hero-kicker">FINOPS INTELLIGENCE</div>
+                <h1 class="hero-headline">Financial Operations &amp;<br>Risk Analytics</h1>
+                <p class="hero-lead">Transforming financial transaction data into actionable risk, efficiency and decision intelligence.</p>
+            </div>
+
+            <!-- EDITORIAL KEY METRICS -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value" id="overview-total-transactions">—</div>
+                    <div class="metric-label">Transactions Analyzed</div>
+                    <div class="metric-sub">PaySim Synthetic Dataset</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" id="overview-fraud-rate">—</div>
+                    <div class="metric-label">Fraud Rate</div>
+                    <div class="metric-sub" id="overview-fraud-count">— Fraud Instances</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" id="overview-high-risk">—</div>
+                    <div class="metric-label">High-Risk Transactions</div>
+                    <div class="metric-sub">Flagged for Priority Review</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" id="overview-total-value">—</div>
+                    <div class="metric-label">Transaction Value</div>
+                    <div class="metric-sub">Gross Transaction Volume</div>
+                    <div class="synthetic-disclaimer">Synthetic transaction value — not real portfolio assets</div>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- SECTION HEADER -->
+            <div class="section-header-block">
+                <h2 class="editorial-section-title">Understanding financial activity</h2>
+                <p class="section-subtitle">Portfolio volume distribution, transaction categories, and temporal progression analysis.</p>
+            </div>
+
+            <!-- CHARTS GRID -->
+            <div class="grid-two-col">
+                <div class="editorial-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Transaction Volume by Type</h3>
+                        <span class="card-tag">Category Split</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="chart-type-distribution"></canvas>
+                    </div>
+                </div>
+
+                <div class="editorial-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Transaction Activity Over Time</h3>
+                        <span class="card-tag">Hourly Steps (1 – 743)</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="chart-transaction-volume"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FRAUD TIMELINE CARD -->
+            <div class="editorial-card full-width mt-6 mb-6">
+                <div class="card-header">
+                    <h3 class="card-title">Fraud Activity Over Time</h3>
+                    <span class="card-tag">Detected Incidents per Step</span>
+                </div>
+                <div class="chart-container" style="height: 220px;">
+                    <canvas id="chart-fraud-trend"></canvas>
+                </div>
+            </div>
+
+            <!-- RISKS SUMMARY CARD -->
+            <div class="editorial-card full-width">
+                <div class="card-header">
+                    <h3 class="card-title">Portfolio Risk Breakdown</h3>
+                    <span class="card-tag">Score Banding</span>
+                </div>
+                <div class="risk-bands-grid">
+                    <div class="risk-band-item low">
+                        <div class="risk-band-label">LOW RISK (&lt; 0.30)</div>
+                        <div class="risk-band-count" id="overview-low-risk-count">—</div>
+                        <div class="risk-band-desc">Automated standard processing path</div>
+                    </div>
+                    <div class="risk-band-item medium">
+                        <div class="risk-band-label">MEDIUM RISK (0.30 – 0.70)</div>
+                        <div class="risk-band-count" id="overview-medium-risk-count">—</div>
+                        <div class="risk-band-desc">Enhanced monitoring &amp; verification</div>
+                    </div>
+                    <div class="risk-band-item high">
+                        <div class="risk-band-label">HIGH RISK (&ge; 0.70)</div>
+                        <div class="risk-band-count" id="overview-high-risk-count-band">—</div>
+                        <div class="risk-band-desc">Immediate manual hold &amp; investigation</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: RISK ANALYTICS -->
+        <section id="tab-risk" class="content-tab">
+            <div class="editorial-hero compact">
+                <div class="hero-kicker">PREDICTIVE MODELING</div>
+                <h1 class="hero-headline">Understanding risk</h1>
+                <p class="hero-lead">Machine learning fraud detection pipeline built on Random Forest with balanced sub-sampling.</p>
+            </div>
+
+            <!-- MODEL METRICS BANNER -->
+            <div class="model-metrics-banner">
+                <div class="model-meta">
+                    <div class="model-name-tag">MODEL ARCHITECTURE</div>
+                    <div class="model-name" id="model-architecture-name">—</div>
+                    <div class="model-desc">Configured with balanced subsampling to address severe class imbalance in PaySim data.</div>
+                    <div class="synthetic-disclaimer mt-4">PaySim is a synthetic transaction dataset.</div>
+                </div>
+                <div class="model-stats-grid" style="grid-template-columns: repeat(5, 1fr);">
+                    <div class="model-stat-item">
+                        <div class="model-stat-val" id="model-roc-auc">—</div>
+                        <div class="model-stat-lbl">ROC-AUC</div>
+                    </div>
+                    <div class="model-stat-item">
+                        <div class="model-stat-val" id="model-precision">—</div>
+                        <div class="model-stat-lbl">Precision</div>
+                    </div>
+                    <div class="model-stat-item">
+                        <div class="model-stat-val" id="model-recall">—</div>
+                        <div class="model-stat-lbl">Recall</div>
+                    </div>
+                    <div class="model-stat-item">
+                        <div class="model-stat-val" id="model-f1">—</div>
+                        <div class="model-stat-lbl">F1 Score</div>
+                    </div>
+                    <div class="model-stat-item">
+                        <div class="model-stat-val" id="model-pr-auc">—</div>
+                        <div class="model-stat-lbl">PR-AUC</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RISK DISTRIBUTION SECTION -->
+            <div class="editorial-card full-width mt-6">
+                <div class="card-header">
+                    <h3 class="card-title">Risk Segmentation Distribution</h3>
+                    <span class="card-tag">Portfolio Classification</span>
+                </div>
+                <div class="risk-bands-grid">
+                    <div class="risk-band-item low">
+                        <div class="risk-band-label">LOW RISK (&lt; 0.30)</div>
+                        <div class="risk-band-count" id="risk-page-low-count">—</div>
+                        <div class="risk-band-desc">Automated standard processing path</div>
+                    </div>
+                    <div class="risk-band-item medium">
+                        <div class="risk-band-label">MEDIUM RISK (0.30 – 0.70)</div>
+                        <div class="risk-band-count" id="risk-page-medium-count">—</div>
+                        <div class="risk-band-desc">Enhanced verification monitoring</div>
+                    </div>
+                    <div class="risk-band-item high">
+                        <div class="risk-band-label">HIGH RISK (&ge; 0.70)</div>
+                        <div class="risk-band-count" id="risk-page-high-count">—</div>
+                        <div class="risk-band-desc">Immediate manual hold &amp; investigation</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="grid-two-col">
+                <!-- FEATURE IMPORTANCE -->
+                <div class="editorial-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Top Feature Importances</h3>
+                        <span class="card-tag">Model Explainability</span>
+                    </div>
+                    <p class="card-subtext">Key factors driving fraud prediction probabilities across the transaction portfolio.</p>
+                    <div class="feature-importance-list" id="feature-importance-container">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- FRAUD RATE BY TYPE -->
+                <div class="editorial-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Fraud Vulnerability by Type</h3>
+                        <span class="card-tag">Risk Exposure</span>
+                    </div>
+                    <p class="card-subtext">Concentration of fraudulent activity across transaction payment mechanisms.</p>
+                    <div class="fraud-type-list" id="fraud-type-container">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- TOP HIGH-RISK TRANSACTIONS TABLE -->
+            <div class="editorial-card full-width mt-6">
+                <div class="card-header">
+                    <h3 class="card-title">Top High-Risk Transactions</h3>
+                    <span class="card-tag">Scored Extract</span>
+                </div>
+                <div class="table-wrapper">
+                    <table class="editorial-table">
+                        <thead>
+                            <tr>
+                                <th>Step / Hour</th>
+                                <th>Transaction Type</th>
+                                <th>Amount</th>
+                                <th>Origin Account</th>
+                                <th>Destination Account</th>
+                                <th>Risk Score</th>
+                                <th>Risk Band</th>
+                            </tr>
+                        </thead>
+                        <tbody id="high-risk-table-body">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: PROCESS INTELLIGENCE -->
+        <section id="tab-process" class="content-tab">
+            <div class="editorial-hero compact">
+                <div class="hero-kicker">OPERATIONAL BOTTLENECK ANALYSIS</div>
+                <h1 class="hero-headline">Where operations slow down</h1>
+                <p class="hero-lead">Stage-level workflow progression, processing latency, and operational SLA analysis.</p>
+            </div>
+
+            <!-- BOTTLENECK ALERT BANNER -->
+            <div class="bottleneck-banner">
+                <div class="bottleneck-icon">!</div>
+                <div class="bottleneck-text">
+                    <div class="bottleneck-title">IDENTIFIED OPERATIONAL BOTTLENECK: <span id="bottleneck-stage-name">—</span></div>
+                    <div class="bottleneck-desc" id="bottleneck-desc-text">—</div>
+                </div>
+            </div>
+
+            <!-- VISUAL PROCESS FLOW -->
+            <div class="editorial-card full-width">
+                <div class="card-header">
+                    <h3 class="card-title">Transaction Process Flow</h3>
+                    <span class="card-tag">Stage Progression</span>
+                </div>
+                
+                <div class="process-flow-diagram" id="process-flow-container">
+                    <!-- Populated dynamically with process stages -->
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- PROCESS EFFICIENCY SUMMARY -->
+            <div class="grid-two-col">
+                <div class="editorial-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Stage Processing Latency (Minutes)</h3>
+                        <span class="card-tag">Avg vs P95</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="chart-processing-latency"></canvas>
+                    </div>
+                </div>
+
+                <div class="editorial-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Operational Efficiency Portfolio Summary</h3>
+                        <span class="card-tag">Simulated Metrics</span>
+                    </div>
+                    <div class="efficiency-summary-grid">
+                        <div class="eff-stat-card">
+                            <div class="eff-stat-val" id="process-end-to-end-time">—</div>
+                            <div class="eff-stat-lbl">Average End-to-End Latency</div>
+                        </div>
+                        <div class="eff-stat-card">
+                            <div class="eff-stat-val" id="process-sla-breach-rate">—</div>
+                            <div class="eff-stat-lbl">Weighted SLA Breach Rate</div>
+                        </div>
+                        <div class="eff-stat-card">
+                            <div class="eff-stat-val" id="process-operational-cost">—</div>
+                            <div class="eff-stat-lbl">Simulated Total Operational Cost</div>
+                        </div>
+                    </div>
+                    <div class="simulation-notice mt-4">
+                        <strong class="notice-tag">DERIVED / SIMULATED ASSUMPTION:</strong>
+                        <span id="process-notice-text">PaySim provides transaction-level data; workflow timings, costs and SLA measures are simulated analytical assumptions for process analysis.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: DECISION SIMULATOR -->
+        <section id="tab-decisions" class="content-tab">
+            <div class="editorial-hero compact">
+                <div class="hero-kicker">EXECUTIVE DECISION ENGINE</div>
+                <h1 class="hero-headline">Decisions backed by data</h1>
+                <p class="hero-lead">Compare operational scenarios using calculated efficiency, cost and risk trade-offs.</p>
+            </div>
+
+            <!-- RECOMMENDATION BANNER -->
+            <div class="recommendation-banner" id="recommendation-banner">
+                <div class="rec-badge">RECOMMENDED DECISION</div>
+                <div class="rec-title" id="rec-scenario-name">—</div>
+                <div class="rec-reason" id="rec-scenario-reason">—</div>
+                <div class="rec-weights-row mt-4" style="font-size: 12px; color: var(--accent-blue); font-weight: 600; letter-spacing: 0.5px;">
+                    Scoring Framework Weights: Efficiency (40%) &bull; Cost Savings (35%) &bull; Risk Impact (25%)
+                </div>
+            </div>
+
+            <!-- SCENARIOS COMPARISON CARDS -->
+            <div class="scenarios-grid" id="scenarios-container">
+                <!-- Populated dynamically -->
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- DETAILED COMPARISON TABLE -->
+            <div class="editorial-card full-width">
+                <div class="card-header">
+                    <h3 class="card-title">Comprehensive Scenario Comparison</h3>
+                    <span class="card-tag">Simulated / Projected Metrics</span>
+                </div>
+                <div class="table-wrapper">
+                    <table class="editorial-table">
+                        <thead>
+                            <tr>
+                                <th>Scenario</th>
+                                <th>Decision Score</th>
+                                <th>Annual Savings</th>
+                                <th>Processing Speedup</th>
+                                <th>Impl. Cost</th>
+                                <th>Fraud Risk Impact</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="decisions-table-body">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="simulation-notice mt-4">
+                    <strong class="notice-tag">NOTE ON SIMULATED PROJECTIONS:</strong>
+                    <span>All scenario impacts, financial annualization, and score weights (40% Efficiency, 35% Cost, 25% Risk) represent model simulations for executive evaluation.</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="editorial-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo-primary">FINOPS INTELLIGENCE</div>
+                <div class="footer-tagline">Financial Operations, Risk &amp; Process Analytics Platform</div>
+            </div>
+            <div class="footer-meta">
+                <span>Institutional Analytics MVP</span>
+                <span class="footer-separator">•</span>
+                <span>Powered by PaySim Financial Dataset</span>
+                <span class="footer-separator">•</span>
+                <a href="#overview" onclick="switchTab('overview')">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

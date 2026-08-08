@@ -1,0 +1,4618 @@
+{
+  "dataset": "PaySim synthetic financial transaction dataset",
+  "source_file": "data\\PS_20174392719_1491204439457_log.csv",
+  "rows_processed": 6362620,
+  "rows_removed_during_cleaning": 0,
+  "processed_extract_rows": 250000,
+  "metrics": {
+    "total_transactions": 6362620,
+    "total_transaction_value": 1144392944759.77,
+    "average_transaction_amount": 179861.90354913071,
+    "median_transaction_amount": 74871.94,
+    "transaction_types": [
+      "CASH_IN",
+      "CASH_OUT",
+      "DEBIT",
+      "PAYMENT",
+      "TRANSFER"
+    ],
+    "transaction_volume_by_type": [
+      {
+        "type": "CASH_OUT",
+        "transaction_count": 2237500,
+        "transaction_value": 394412995224.49,
+        "average_amount": 176273.96434614077
+      },
+      {
+        "type": "PAYMENT",
+        "transaction_count": 2151495,
+        "transaction_value": 28093371138.37,
+        "average_amount": 13057.604660187451
+      },
+      {
+        "type": "CASH_IN",
+        "transaction_count": 1399284,
+        "transaction_value": 236367391912.46,
+        "average_amount": 168920.24200409636
+      },
+      {
+        "type": "TRANSFER",
+        "transaction_count": 532909,
+        "transaction_value": 485291987263.17,
+        "average_amount": 910647.0096454929
+      },
+      {
+        "type": "DEBIT",
+        "transaction_count": 41432,
+        "transaction_value": 227199221.28,
+        "average_amount": 5483.6653137671365
+      }
+    ],
+    "transaction_value_by_type": [
+      {
+        "type": "CASH_OUT",
+        "transaction_value": 394412995224.49
+      },
+      {
+        "type": "PAYMENT",
+        "transaction_value": 28093371138.37
+      },
+      {
+        "type": "CASH_IN",
+        "transaction_value": 236367391912.46
+      },
+      {
+        "type": "TRANSFER",
+        "transaction_value": 485291987263.17
+      },
+      {
+        "type": "DEBIT",
+        "transaction_value": 227199221.28
+      }
+    ],
+    "fraud_count": 8213,
+    "fraud_rate": 0.001290820448180152,
+    "fraud_distribution": {
+      "legitimate": 6354407,
+      "fraudulent": 8213
+    },
+    "transaction_trends_by_step": [
+      {
+        "step": 1,
+        "transaction_count": 2708,
+        "transaction_value": 285429181.15,
+        "fraud_count": 16
+      },
+      {
+        "step": 2,
+        "transaction_count": 1014,
+        "transaction_value": 85921604.02,
+        "fraud_count": 8
+      },
+      {
+        "step": 3,
+        "transaction_count": 552,
+        "transaction_value": 43293884.42,
+        "fraud_count": 4
+      },
+      {
+        "step": 4,
+        "transaction_count": 565,
+        "transaction_value": 72910028.57,
+        "fraud_count": 10
+      },
+      {
+        "step": 5,
+        "transaction_count": 665,
+        "transaction_value": 45548089.75,
+        "fraud_count": 6
+      },
+      {
+        "step": 6,
+        "transaction_count": 1660,
+        "transaction_value": 164310551.22,
+        "fraud_count": 22
+      },
+      {
+        "step": 7,
+        "transaction_count": 6837,
+        "transaction_value": 832930814.24,
+        "fraud_count": 12
+      },
+      {
+        "step": 8,
+        "transaction_count": 21097,
+        "transaction_value": 3439602407.35,
+        "fraud_count": 12
+      },
+      {
+        "step": 9,
+        "transaction_count": 37628,
+        "transaction_value": 7008379239.43,
+        "fraud_count": 19
+      },
+      {
+        "step": 10,
+        "transaction_count": 35991,
+        "transaction_value": 7124214893.71,
+        "fraud_count": 11
+      },
+      {
+        "step": 11,
+        "transaction_count": 37241,
+        "transaction_value": 7015066478.01,
+        "fraud_count": 7
+      },
+      {
+        "step": 12,
+        "transaction_count": 36153,
+        "transaction_value": 6754284804.75,
+        "fraud_count": 14
+      },
+      {
+        "step": 13,
+        "transaction_count": 37515,
+        "transaction_value": 6847540999.97,
+        "fraud_count": 14
+      },
+      {
+        "step": 14,
+        "transaction_count": 41485,
+        "transaction_value": 6874186933.62,
+        "fraud_count": 12
+      },
+      {
+        "step": 15,
+        "transaction_count": 44609,
+        "transaction_value": 7183723206.53,
+        "fraud_count": 20
+      },
+      {
+        "step": 16,
+        "transaction_count": 42471,
+        "transaction_value": 6960084691.15,
+        "fraud_count": 10
+      },
+      {
+        "step": 17,
+        "transaction_count": 43361,
+        "transaction_value": 7116325732.27,
+        "fraud_count": 7
+      },
+      {
+        "step": 18,
+        "transaction_count": 49579,
+        "transaction_value": 7255071578.26,
+        "fraud_count": 16
+      },
+      {
+        "step": 19,
+        "transaction_count": 51352,
+        "transaction_value": 7103846529.97,
+        "fraud_count": 11
+      },
+      {
+        "step": 20,
+        "transaction_count": 40625,
+        "transaction_value": 5173930961.93,
+        "fraud_count": 4
+      },
+      {
+        "step": 21,
+        "transaction_count": 19152,
+        "transaction_value": 2239833155.38,
+        "fraud_count": 5
+      },
+      {
+        "step": 22,
+        "transaction_count": 12635,
+        "transaction_value": 1456148844.67,
+        "fraud_count": 23
+      },
+      {
+        "step": 23,
+        "transaction_count": 6144,
+        "transaction_value": 657117971.23,
+        "fraud_count": 2
+      },
+      {
+        "step": 24,
+        "transaction_count": 3216,
+        "transaction_value": 392163044.05,
+        "fraud_count": 6
+      },
+      {
+        "step": 25,
+        "transaction_count": 1598,
+        "transaction_value": 190670809.59,
+        "fraud_count": 18
+      },
+      {
+        "step": 26,
+        "transaction_count": 440,
+        "transaction_value": 53827747.85,
+        "fraud_count": 12
+      },
+      {
+        "step": 27,
+        "transaction_count": 41,
+        "transaction_value": 10549062.83,
+        "fraud_count": 8
+      },
+      {
+        "step": 28,
+        "transaction_count": 4,
+        "transaction_value": 8647152.219999999,
+        "fraud_count": 4
+      },
+      {
+        "step": 29,
+        "transaction_count": 4,
+        "transaction_value": 1217680.46,
+        "fraud_count": 4
+      },
+      {
+        "step": 30,
+        "transaction_count": 8,
+        "transaction_value": 975200.92,
+        "fraud_count": 8
+      },
+      {
+        "step": 31,
+        "transaction_count": 12,
+        "transaction_value": 12927128.040000001,
+        "fraud_count": 12
+      },
+      {
+        "step": 32,
+        "transaction_count": 12,
+        "transaction_value": 9361820.08,
+        "fraud_count": 12
+      },
+      {
+        "step": 33,
+        "transaction_count": 23616,
+        "transaction_value": 4235326534.63,
+        "fraud_count": 12
+      },
+      {
+        "step": 34,
+        "transaction_count": 30904,
+        "transaction_value": 5510123134.35,
+        "fraud_count": 22
+      },
+      {
+        "step": 35,
+        "transaction_count": 29157,
+        "transaction_value": 5295843667.35,
+        "fraud_count": 15
+      },
+      {
+        "step": 36,
+        "transaction_count": 39774,
+        "transaction_value": 6832213559.91,
+        "fraud_count": 19
+      },
+      {
+        "step": 37,
+        "transaction_count": 34000,
+        "transaction_value": 5962020479.16,
+        "fraud_count": 13
+      },
+      {
+        "step": 38,
+        "transaction_count": 31453,
+        "transaction_value": 5242347779.47,
+        "fraud_count": 16
+      },
+      {
+        "step": 39,
+        "transaction_count": 23391,
+        "transaction_value": 3777663323.28,
+        "fraud_count": 12
+      },
+      {
+        "step": 40,
+        "transaction_count": 34270,
+        "transaction_value": 5610763049.04,
+        "fraud_count": 14
+      },
+      {
+        "step": 41,
+        "transaction_count": 36348,
+        "transaction_value": 5788068602.39,
+        "fraud_count": 12
+      },
+      {
+        "step": 42,
+        "transaction_count": 41304,
+        "transaction_value": 6360574481.6,
+        "fraud_count": 14
+      },
+      {
+        "step": 43,
+        "transaction_count": 45060,
+        "transaction_value": 6511754245.67,
+        "fraud_count": 13
+      },
+      {
+        "step": 44,
+        "transaction_count": 38523,
+        "transaction_value": 4830178103.07,
+        "fraud_count": 8
+      },
+      {
+        "step": 45,
+        "transaction_count": 18500,
+        "transaction_value": 2159618105.61,
+        "fraud_count": 16
+      },
+      {
+        "step": 46,
+        "transaction_count": 12445,
+        "transaction_value": 1396954333.96,
+        "fraud_count": 14
+      },
+      {
+        "step": 47,
+        "transaction_count": 8681,
+        "transaction_value": 896077856.93,
+        "fraud_count": 21
+      },
+      {
+        "step": 48,
+        "transaction_count": 5693,
+        "transaction_value": 540938538.75,
+        "fraud_count": 10
+      },
+      {
+        "step": 49,
+        "transaction_count": 764,
+        "transaction_value": 54845905.75,
+        "fraud_count": 4
+      },
+      {
+        "step": 50,
+        "transaction_count": 6,
+        "transaction_value": 3345118.94,
+        "fraud_count": 6
+      },
+      {
+        "step": 51,
+        "transaction_count": 14,
+        "transaction_value": 8313333.94,
+        "fraud_count": 14
+      },
+      {
+        "step": 52,
+        "transaction_count": 8,
+        "transaction_value": 19349931.92,
+        "fraud_count": 8
+      },
+      {
+        "step": 53,
+        "transaction_count": 10,
+        "transaction_value": 12617901.54,
+        "fraud_count": 10
+      },
+      {
+        "step": 54,
+        "transaction_count": 4,
+        "transaction_value": 3577598.3600000003,
+        "fraud_count": 4
+      },
+      {
+        "step": 55,
+        "transaction_count": 12,
+        "transaction_value": 4969150.82,
+        "fraud_count": 12
+      },
+      {
+        "step": 56,
+        "transaction_count": 18,
+        "transaction_value": 21799570.76,
+        "fraud_count": 18
+      },
+      {
+        "step": 57,
+        "transaction_count": 6,
+        "transaction_value": 3053734.92,
+        "fraud_count": 6
+      },
+      {
+        "step": 58,
+        "transaction_count": 20,
+        "transaction_value": 40832628.86,
+        "fraud_count": 20
+      },
+      {
+        "step": 59,
+        "transaction_count": 20,
+        "transaction_value": 25707837.72,
+        "fraud_count": 20
+      },
+      {
+        "step": 60,
+        "transaction_count": 12,
+        "transaction_value": 5051824.6,
+        "fraud_count": 12
+      },
+      {
+        "step": 61,
+        "transaction_count": 14,
+        "transaction_value": 10326374.76,
+        "fraud_count": 14
+      },
+      {
+        "step": 62,
+        "transaction_count": 8,
+        "transaction_value": 4512316.5600000005,
+        "fraud_count": 8
+      },
+      {
+        "step": 63,
+        "transaction_count": 8,
+        "transaction_value": 4106789.76,
+        "fraud_count": 8
+      },
+      {
+        "step": 64,
+        "transaction_count": 18,
+        "transaction_value": 14681327.959999999,
+        "fraud_count": 18
+      },
+      {
+        "step": 65,
+        "transaction_count": 20,
+        "transaction_value": 16326827.82,
+        "fraud_count": 20
+      },
+      {
+        "step": 66,
+        "transaction_count": 24,
+        "transaction_value": 43525991.12,
+        "fraud_count": 24
+      },
+      {
+        "step": 67,
+        "transaction_count": 6,
+        "transaction_value": 2354600.56,
+        "fraud_count": 6
+      },
+      {
+        "step": 68,
+        "transaction_count": 18,
+        "transaction_value": 29882358.080000002,
+        "fraud_count": 18
+      },
+      {
+        "step": 69,
+        "transaction_count": 20,
+        "transaction_value": 41458369.28,
+        "fraud_count": 20
+      },
+      {
+        "step": 70,
+        "transaction_count": 6,
+        "transaction_value": 2941247.94,
+        "fraud_count": 6
+      },
+      {
+        "step": 71,
+        "transaction_count": 20,
+        "transaction_value": 13655351.44,
+        "fraud_count": 20
+      },
+      {
+        "step": 72,
+        "transaction_count": 14,
+        "transaction_value": 59848379.22,
+        "fraud_count": 14
+      },
+      {
+        "step": 73,
+        "transaction_count": 8,
+        "transaction_value": 2582474.42,
+        "fraud_count": 8
+      },
+      {
+        "step": 74,
+        "transaction_count": 22,
+        "transaction_value": 33794195.06,
+        "fraud_count": 22
+      },
+      {
+        "step": 75,
+        "transaction_count": 8,
+        "transaction_value": 5970615.06,
+        "fraud_count": 8
+      },
+      {
+        "step": 76,
+        "transaction_count": 4,
+        "transaction_value": 4152727.08,
+        "fraud_count": 4
+      },
+      {
+        "step": 77,
+        "transaction_count": 10,
+        "transaction_value": 35925500.0,
+        "fraud_count": 10
+      },
+      {
+        "step": 78,
+        "transaction_count": 10,
+        "transaction_value": 11208144.9,
+        "fraud_count": 10
+      },
+      {
+        "step": 79,
+        "transaction_count": 10,
+        "transaction_value": 6261606.14,
+        "fraud_count": 10
+      },
+      {
+        "step": 80,
+        "transaction_count": 10,
+        "transaction_value": 2992622.6,
+        "fraud_count": 10
+      },
+      {
+        "step": 81,
+        "transaction_count": 10,
+        "transaction_value": 10202118.94,
+        "fraud_count": 10
+      },
+      {
+        "step": 82,
+        "transaction_count": 10,
+        "transaction_value": 35812474.28,
+        "fraud_count": 10
+      },
+      {
+        "step": 83,
+        "transaction_count": 12,
+        "transaction_value": 10608310.4,
+        "fraud_count": 12
+      },
+      {
+        "step": 84,
+        "transaction_count": 16,
+        "transaction_value": 36611285.98,
+        "fraud_count": 16
+      },
+      {
+        "step": 85,
+        "transaction_count": 14,
+        "transaction_value": 25618937.119999997,
+        "fraud_count": 14
+      },
+      {
+        "step": 86,
+        "transaction_count": 18,
+        "transaction_value": 53565564.56,
+        "fraud_count": 18
+      },
+      {
+        "step": 87,
+        "transaction_count": 6,
+        "transaction_value": 2627321.58,
+        "fraud_count": 6
+      },
+      {
+        "step": 88,
+        "transaction_count": 8,
+        "transaction_value": 34628042.4,
+        "fraud_count": 8
+      },
+      {
+        "step": 89,
+        "transaction_count": 6,
+        "transaction_value": 2157581.12,
+        "fraud_count": 6
+      },
+      {
+        "step": 90,
+        "transaction_count": 16,
+        "transaction_value": 20774510.34,
+        "fraud_count": 16
+      },
+      {
+        "step": 91,
+        "transaction_count": 8,
+        "transaction_value": 4339885.1,
+        "fraud_count": 8
+      },
+      {
+        "step": 92,
+        "transaction_count": 10,
+        "transaction_value": 3754118.7600000002,
+        "fraud_count": 10
+      },
+      {
+        "step": 93,
+        "transaction_count": 4444,
+        "transaction_value": 608142230.27,
+        "fraud_count": 16
+      },
+      {
+        "step": 94,
+        "transaction_count": 10372,
+        "transaction_value": 1286675245.1200001,
+        "fraud_count": 12
+      },
+      {
+        "step": 95,
+        "transaction_count": 6858,
+        "transaction_value": 853594039.56,
+        "fraud_count": 14
+      },
+      {
+        "step": 96,
+        "transaction_count": 6350,
+        "transaction_value": 738547809.8,
+        "fraud_count": 4
+      },
+      {
+        "step": 97,
+        "transaction_count": 685,
+        "transaction_value": 74683514.7,
+        "fraud_count": 10
+      },
+      {
+        "step": 98,
+        "transaction_count": 14,
+        "transaction_value": 12891419.98,
+        "fraud_count": 14
+      },
+      {
+        "step": 99,
+        "transaction_count": 8,
+        "transaction_value": 13044113.8,
+        "fraud_count": 8
+      },
+      {
+        "step": 100,
+        "transaction_count": 6,
+        "transaction_value": 3013658.28,
+        "fraud_count": 6
+      },
+      {
+        "step": 101,
+        "transaction_count": 12,
+        "transaction_value": 12062241.02,
+        "fraud_count": 12
+      },
+      {
+        "step": 102,
+        "transaction_count": 12,
+        "transaction_value": 6442999.619999999,
+        "fraud_count": 12
+      },
+      {
+        "step": 103,
+        "transaction_count": 8,
+        "transaction_value": 5482907.76,
+        "fraud_count": 8
+      },
+      {
+        "step": 104,
+        "transaction_count": 14,
+        "transaction_value": 7764539.0,
+        "fraud_count": 14
+      },
+      {
+        "step": 105,
+        "transaction_count": 18,
+        "transaction_value": 15487769.299999999,
+        "fraud_count": 18
+      },
+      {
+        "step": 106,
+        "transaction_count": 18,
+        "transaction_value": 12407586.84,
+        "fraud_count": 18
+      },
+      {
+        "step": 107,
+        "transaction_count": 10,
+        "transaction_value": 5062020.640000001,
+        "fraud_count": 10
+      },
+      {
+        "step": 108,
+        "transaction_count": 8,
+        "transaction_value": 15526032.360000001,
+        "fraud_count": 8
+      },
+      {
+        "step": 109,
+        "transaction_count": 12,
+        "transaction_value": 8388165.9399999995,
+        "fraud_count": 12
+      },
+      {
+        "step": 110,
+        "transaction_count": 10,
+        "transaction_value": 8845515.58,
+        "fraud_count": 10
+      },
+      {
+        "step": 111,
+        "transaction_count": 10,
+        "transaction_value": 11801388.46,
+        "fraud_count": 10
+      },
+      {
+        "step": 112,
+        "transaction_count": 2,
+        "transaction_value": 84837.7,
+        "fraud_count": 2
+      },
+      {
+        "step": 113,
+        "transaction_count": 6,
+        "transaction_value": 3976999.1,
+        "fraud_count": 6
+      },
+      {
+        "step": 114,
+        "transaction_count": 4,
+        "transaction_value": 7748974.38,
+        "fraud_count": 4
+      },
+      {
+        "step": 115,
+        "transaction_count": 10,
+        "transaction_value": 7226221.720000001,
+        "fraud_count": 10
+      },
+      {
+        "step": 116,
+        "transaction_count": 14,
+        "transaction_value": 16376396.78,
+        "fraud_count": 14
+      },
+      {
+        "step": 117,
+        "transaction_count": 12,
+        "transaction_value": 13355288.92,
+        "fraud_count": 12
+      },
+      {
+        "step": 118,
+        "transaction_count": 12,
+        "transaction_value": 33446321.98,
+        "fraud_count": 12
+      },
+      {
+        "step": 119,
+        "transaction_count": 5740,
+        "transaction_value": 652470324.75,
+        "fraud_count": 10
+      },
+      {
+        "step": 120,
+        "transaction_count": 3144,
+        "transaction_value": 377544600.44,
+        "fraud_count": 12
+      },
+      {
+        "step": 121,
+        "transaction_count": 1074,
+        "transaction_value": 111898438.66,
+        "fraud_count": 14
+      },
+      {
+        "step": 122,
+        "transaction_count": 414,
+        "transaction_value": 63367833.74,
+        "fraud_count": 14
+      },
+      {
+        "step": 123,
+        "transaction_count": 52,
+        "transaction_value": 22572340.19,
+        "fraud_count": 6
+      },
+      {
+        "step": 124,
+        "transaction_count": 4,
+        "transaction_value": 22077380.04,
+        "fraud_count": 4
+      },
+      {
+        "step": 125,
+        "transaction_count": 10,
+        "transaction_value": 18369419.18,
+        "fraud_count": 10
+      },
+      {
+        "step": 126,
+        "transaction_count": 6,
+        "transaction_value": 14855403.24,
+        "fraud_count": 6
+      },
+      {
+        "step": 127,
+        "transaction_count": 14,
+        "transaction_value": 22089204.56,
+        "fraud_count": 14
+      },
+      {
+        "step": 128,
+        "transaction_count": 8,
+        "transaction_value": 15992485.52,
+        "fraud_count": 8
+      },
+      {
+        "step": 129,
+        "transaction_count": 21986,
+        "transaction_value": 4391391782.56,
+        "fraud_count": 6
+      },
+      {
+        "step": 130,
+        "transaction_count": 32890,
+        "transaction_value": 6698931223.32,
+        "fraud_count": 6
+      },
+      {
+        "step": 131,
+        "transaction_count": 36375,
+        "transaction_value": 6783763408.09,
+        "fraud_count": 16
+      },
+      {
+        "step": 132,
+        "transaction_count": 35936,
+        "transaction_value": 6687443284.34,
+        "fraud_count": 10
+      },
+      {
+        "step": 133,
+        "transaction_count": 35147,
+        "transaction_value": 6475193394.21,
+        "fraud_count": 10
+      },
+      {
+        "step": 134,
+        "transaction_count": 32391,
+        "transaction_value": 5611630988.64,
+        "fraud_count": 10
+      },
+      {
+        "step": 135,
+        "transaction_count": 27556,
+        "transaction_value": 4825611448.52,
+        "fraud_count": 8
+      },
+      {
+        "step": 136,
+        "transaction_count": 30340,
+        "transaction_value": 5402422002.03,
+        "fraud_count": 10
+      },
+      {
+        "step": 137,
+        "transaction_count": 32559,
+        "transaction_value": 5123734992.96,
+        "fraud_count": 12
+      },
+      {
+        "step": 138,
+        "transaction_count": 31422,
+        "transaction_value": 4430204695.77,
+        "fraud_count": 4
+      },
+      {
+        "step": 139,
+        "transaction_count": 46054,
+        "transaction_value": 6807832968.0,
+        "fraud_count": 4
+      },
+      {
+        "step": 140,
+        "transaction_count": 37012,
+        "transaction_value": 4940313493.58,
+        "fraud_count": 14
+      },
+      {
+        "step": 141,
+        "transaction_count": 16434,
+        "transaction_value": 2084368981.78,
+        "fraud_count": 8
+      },
+      {
+        "step": 142,
+        "transaction_count": 12189,
+        "transaction_value": 1546712100.15,
+        "fraud_count": 8
+      },
+      {
+        "step": 143,
+        "transaction_count": 7609,
+        "transaction_value": 931760710.67,
+        "fraud_count": 16
+      },
+      {
+        "step": 144,
+        "transaction_count": 3523,
+        "transaction_value": 377448388.59,
+        "fraud_count": 10
+      },
+      {
+        "step": 145,
+        "transaction_count": 1117,
+        "transaction_value": 113049826.98,
+        "fraud_count": 14
+      },
+      {
+        "step": 146,
+        "transaction_count": 522,
+        "transaction_value": 66316130.03,
+        "fraud_count": 10
+      },
+      {
+        "step": 147,
+        "transaction_count": 84,
+        "transaction_value": 20314127.37,
+        "fraud_count": 6
+      },
+      {
+        "step": 148,
+        "transaction_count": 12,
+        "transaction_value": 10802770.02,
+        "fraud_count": 12
+      },
+      {
+        "step": 149,
+        "transaction_count": 22,
+        "transaction_value": 42013551.06,
+        "fraud_count": 22
+      },
+      {
+        "step": 150,
+        "transaction_count": 14,
+        "transaction_value": 14014584.440000001,
+        "fraud_count": 14
+      },
+      {
+        "step": 151,
+        "transaction_count": 18,
+        "transaction_value": 10203595.36,
+        "fraud_count": 18
+      },
+      {
+        "step": 152,
+        "transaction_count": 6,
+        "transaction_value": 5335020.24,
+        "fraud_count": 6
+      },
+      {
+        "step": 153,
+        "transaction_count": 19475,
+        "transaction_value": 3684861307.08,
+        "fraud_count": 10
+      },
+      {
+        "step": 154,
+        "transaction_count": 29241,
+        "transaction_value": 5375430913.09,
+        "fraud_count": 10
+      },
+      {
+        "step": 155,
+        "transaction_count": 29927,
+        "transaction_value": 5606061971.16,
+        "fraud_count": 8
+      },
+      {
+        "step": 156,
+        "transaction_count": 27603,
+        "transaction_value": 4960414720.23,
+        "fraud_count": 18
+      },
+      {
+        "step": 157,
+        "transaction_count": 29764,
+        "transaction_value": 5050314367.42,
+        "fraud_count": 16
+      },
+      {
+        "step": 158,
+        "transaction_count": 27839,
+        "transaction_value": 4789734067.88,
+        "fraud_count": 8
+      },
+      {
+        "step": 159,
+        "transaction_count": 27561,
+        "transaction_value": 4573981952.64,
+        "fraud_count": 10
+      },
+      {
+        "step": 160,
+        "transaction_count": 27765,
+        "transaction_value": 4657390938.93,
+        "fraud_count": 26
+      },
+      {
+        "step": 161,
+        "transaction_count": 33049,
+        "transaction_value": 5387907144.99,
+        "fraud_count": 14
+      },
+      {
+        "step": 162,
+        "transaction_count": 40622,
+        "transaction_value": 6199143085.37,
+        "fraud_count": 10
+      },
+      {
+        "step": 163,
+        "transaction_count": 46352,
+        "transaction_value": 6710359139.23,
+        "fraud_count": 8
+      },
+      {
+        "step": 164,
+        "transaction_count": 39102,
+        "transaction_value": 4981351201.62,
+        "fraud_count": 14
+      },
+      {
+        "step": 165,
+        "transaction_count": 16542,
+        "transaction_value": 2053484812.33,
+        "fraud_count": 4
+      },
+      {
+        "step": 166,
+        "transaction_count": 12176,
+        "transaction_value": 1382688727.46,
+        "fraud_count": 6
+      },
+      {
+        "step": 167,
+        "transaction_count": 7946,
+        "transaction_value": 933051702.08,
+        "fraud_count": 6
+      },
+      {
+        "step": 168,
+        "transaction_count": 3824,
+        "transaction_value": 442551927.76,
+        "fraud_count": 2
+      },
+      {
+        "step": 169,
+        "transaction_count": 1464,
+        "transaction_value": 136069265.33,
+        "fraud_count": 10
+      },
+      {
+        "step": 170,
+        "transaction_count": 529,
+        "transaction_value": 82260708.29,
+        "fraud_count": 16
+      },
+      {
+        "step": 171,
+        "transaction_count": 14,
+        "transaction_value": 30834521.240000002,
+        "fraud_count": 14
+      },
+      {
+        "step": 172,
+        "transaction_count": 10,
+        "transaction_value": 7312840.08,
+        "fraud_count": 10
+      },
+      {
+        "step": 173,
+        "transaction_count": 14,
+        "transaction_value": 27327876.34,
+        "fraud_count": 14
+      },
+      {
+        "step": 174,
+        "transaction_count": 10,
+        "transaction_value": 6161251.8,
+        "fraud_count": 10
+      },
+      {
+        "step": 175,
+        "transaction_count": 8,
+        "transaction_value": 2700000.9000000004,
+        "fraud_count": 8
+      },
+      {
+        "step": 176,
+        "transaction_count": 10,
+        "transaction_value": 3362807.26,
+        "fraud_count": 10
+      },
+      {
+        "step": 177,
+        "transaction_count": 17336,
+        "transaction_value": 3047457482.65,
+        "fraud_count": 18
+      },
+      {
+        "step": 178,
+        "transaction_count": 28204,
+        "transaction_value": 5861954398.26,
+        "fraud_count": 14
+      },
+      {
+        "step": 179,
+        "transaction_count": 30534,
+        "transaction_value": 5115943490.93,
+        "fraud_count": 8
+      },
+      {
+        "step": 180,
+        "transaction_count": 31481,
+        "transaction_value": 5639808481.31,
+        "fraud_count": 10
+      },
+      {
+        "step": 181,
+        "transaction_count": 31749,
+        "transaction_value": 5681319969.67,
+        "fraud_count": 11
+      },
+      {
+        "step": 182,
+        "transaction_count": 31900,
+        "transaction_value": 5233469114.49,
+        "fraud_count": 8
+      },
+      {
+        "step": 183,
+        "transaction_count": 31199,
+        "transaction_value": 4692443326.21,
+        "fraud_count": 16
+      },
+      {
+        "step": 184,
+        "transaction_count": 32175,
+        "transaction_value": 5061974882.0,
+        "fraud_count": 8
+      },
+      {
+        "step": 185,
+        "transaction_count": 37323,
+        "transaction_value": 6153894465.29,
+        "fraud_count": 16
+      },
+      {
+        "step": 186,
+        "transaction_count": 43747,
+        "transaction_value": 6531302921.01,
+        "fraud_count": 17
+      },
+      {
+        "step": 187,
+        "transaction_count": 49083,
+        "transaction_value": 7391259249.56,
+        "fraud_count": 10
+      },
+      {
+        "step": 188,
+        "transaction_count": 39079,
+        "transaction_value": 4675322824.45,
+        "fraud_count": 10
+      },
+      {
+        "step": 189,
+        "transaction_count": 17674,
+        "transaction_value": 2001807262.67,
+        "fraud_count": 10
+      },
+      {
+        "step": 190,
+        "transaction_count": 12669,
+        "transaction_value": 1350395827.22,
+        "fraud_count": 8
+      },
+      {
+        "step": 191,
+        "transaction_count": 9111,
+        "transaction_value": 886835789.38,
+        "fraud_count": 12
+      },
+      {
+        "step": 192,
+        "transaction_count": 4314,
+        "transaction_value": 409379744.14,
+        "fraud_count": 10
+      },
+      {
+        "step": 193,
+        "transaction_count": 1511,
+        "transaction_value": 136595891.1,
+        "fraud_count": 8
+      },
+      {
+        "step": 194,
+        "transaction_count": 671,
+        "transaction_value": 58442261.13,
+        "fraud_count": 12
+      },
+      {
+        "step": 195,
+        "transaction_count": 141,
+        "transaction_value": 20572775.97,
+        "fraud_count": 10
+      },
+      {
+        "step": 196,
+        "transaction_count": 8,
+        "transaction_value": 4998965.9399999995,
+        "fraud_count": 8
+      },
+      {
+        "step": 197,
+        "transaction_count": 4,
+        "transaction_value": 4894973.5,
+        "fraud_count": 4
+      },
+      {
+        "step": 198,
+        "transaction_count": 12,
+        "transaction_value": 39553204.839999996,
+        "fraud_count": 12
+      },
+      {
+        "step": 199,
+        "transaction_count": 10,
+        "transaction_value": 10151804.44,
+        "fraud_count": 10
+      },
+      {
+        "step": 200,
+        "transaction_count": 8,
+        "transaction_value": 26179145.6,
+        "fraud_count": 8
+      },
+      {
+        "step": 201,
+        "transaction_count": 17963,
+        "transaction_value": 2444701645.21,
+        "fraud_count": 8
+      },
+      {
+        "step": 202,
+        "transaction_count": 31949,
+        "transaction_value": 4604339087.28,
+        "fraud_count": 2
+      },
+      {
+        "step": 203,
+        "transaction_count": 36176,
+        "transaction_value": 5277176879.03,
+        "fraud_count": 8
+      },
+      {
+        "step": 204,
+        "transaction_count": 36856,
+        "transaction_value": 5284768973.08,
+        "fraud_count": 6
+      },
+      {
+        "step": 205,
+        "transaction_count": 33549,
+        "transaction_value": 5365333264.48,
+        "fraud_count": 16
+      },
+      {
+        "step": 206,
+        "transaction_count": 29777,
+        "transaction_value": 4206648534.99,
+        "fraud_count": 12
+      },
+      {
+        "step": 207,
+        "transaction_count": 28288,
+        "transaction_value": 4078718390.73,
+        "fraud_count": 6
+      },
+      {
+        "step": 208,
+        "transaction_count": 29058,
+        "transaction_value": 4081255354.45,
+        "fraud_count": 21
+      },
+      {
+        "step": 209,
+        "transaction_count": 30372,
+        "transaction_value": 4141703465.12,
+        "fraud_count": 6
+      },
+      {
+        "step": 210,
+        "transaction_count": 33004,
+        "transaction_value": 4369134560.91,
+        "fraud_count": 8
+      },
+      {
+        "step": 211,
+        "transaction_count": 36889,
+        "transaction_value": 4763104506.09,
+        "fraud_count": 14
+      },
+      {
+        "step": 212,
+        "transaction_count": 34047,
+        "transaction_value": 4386135424.32,
+        "fraud_count": 40
+      },
+      {
+        "step": 213,
+        "transaction_count": 14775,
+        "transaction_value": 1876024774.84,
+        "fraud_count": 8
+      },
+      {
+        "step": 214,
+        "transaction_count": 10746,
+        "transaction_value": 1331914190.0,
+        "fraud_count": 12
+      },
+      {
+        "step": 215,
+        "transaction_count": 7975,
+        "transaction_value": 1040812156.91,
+        "fraud_count": 10
+      },
+      {
+        "step": 216,
+        "transaction_count": 4130,
+        "transaction_value": 514605168.46,
+        "fraud_count": 6
+      },
+      {
+        "step": 217,
+        "transaction_count": 3347,
+        "transaction_value": 412718375.86,
+        "fraud_count": 16
+      },
+      {
+        "step": 218,
+        "transaction_count": 12,
+        "transaction_value": 22237883.98,
+        "fraud_count": 12
+      },
+      {
+        "step": 219,
+        "transaction_count": 10,
+        "transaction_value": 8562844.34,
+        "fraud_count": 10
+      },
+      {
+        "step": 220,
+        "transaction_count": 6,
+        "transaction_value": 9687097.08,
+        "fraud_count": 6
+      },
+      {
+        "step": 221,
+        "transaction_count": 10,
+        "transaction_value": 5286186.14,
+        "fraud_count": 10
+      },
+      {
+        "step": 222,
+        "transaction_count": 8,
+        "transaction_value": 5949300.24,
+        "fraud_count": 8
+      },
+      {
+        "step": 223,
+        "transaction_count": 8,
+        "transaction_value": 6587448.4799999995,
+        "fraud_count": 8
+      },
+      {
+        "step": 224,
+        "transaction_count": 10,
+        "transaction_value": 20234992.58,
+        "fraud_count": 10
+      },
+      {
+        "step": 225,
+        "transaction_count": 18366,
+        "transaction_value": 3585708429.11,
+        "fraud_count": 12
+      },
+      {
+        "step": 226,
+        "transaction_count": 27522,
+        "transaction_value": 6125641173.05,
+        "fraud_count": 12
+      },
+      {
+        "step": 227,
+        "transaction_count": 30871,
+        "transaction_value": 6004298462.84,
+        "fraud_count": 14
+      },
+      {
+        "step": 228,
+        "transaction_count": 30965,
+        "transaction_value": 5912909516.1,
+        "fraud_count": 16
+      },
+      {
+        "step": 229,
+        "transaction_count": 28304,
+        "transaction_value": 5042346774.47,
+        "fraud_count": 8
+      },
+      {
+        "step": 230,
+        "transaction_count": 26034,
+        "transaction_value": 4431692044.84,
+        "fraud_count": 17
+      },
+      {
+        "step": 231,
+        "transaction_count": 26968,
+        "transaction_value": 4651274087.59,
+        "fraud_count": 17
+      },
+      {
+        "step": 232,
+        "transaction_count": 27482,
+        "transaction_value": 4836628260.07,
+        "fraud_count": 10
+      },
+      {
+        "step": 233,
+        "transaction_count": 14703,
+        "transaction_value": 2401809316.28,
+        "fraud_count": 12
+      },
+      {
+        "step": 234,
+        "transaction_count": 34053,
+        "transaction_value": 5373207185.74,
+        "fraud_count": 14
+      },
+      {
+        "step": 235,
+        "transaction_count": 47491,
+        "transaction_value": 7298145078.92,
+        "fraud_count": 10
+      },
+      {
+        "step": 236,
+        "transaction_count": 37109,
+        "transaction_value": 4564006648.72,
+        "fraud_count": 10
+      },
+      {
+        "step": 237,
+        "transaction_count": 16003,
+        "transaction_value": 1868247705.8,
+        "fraud_count": 12
+      },
+      {
+        "step": 238,
+        "transaction_count": 10920,
+        "transaction_value": 1211714724.47,
+        "fraud_count": 14
+      },
+      {
+        "step": 239,
+        "transaction_count": 8554,
+        "transaction_value": 931485164.92,
+        "fraud_count": 10
+      },
+      {
+        "step": 240,
+        "transaction_count": 4189,
+        "transaction_value": 459973475.4,
+        "fraud_count": 14
+      },
+      {
+        "step": 241,
+        "transaction_count": 1865,
+        "transaction_value": 180380700.47,
+        "fraud_count": 18
+      },
+      {
+        "step": 242,
+        "transaction_count": 637,
+        "transaction_value": 65930719.52,
+        "fraud_count": 8
+      },
+      {
+        "step": 243,
+        "transaction_count": 8,
+        "transaction_value": 16247876.120000001,
+        "fraud_count": 8
+      },
+      {
+        "step": 244,
+        "transaction_count": 12,
+        "transaction_value": 27299325.08,
+        "fraud_count": 12
+      },
+      {
+        "step": 245,
+        "transaction_count": 4,
+        "transaction_value": 1624691.7799999998,
+        "fraud_count": 4
+      },
+      {
+        "step": 246,
+        "transaction_count": 4,
+        "transaction_value": 1692137.58,
+        "fraud_count": 4
+      },
+      {
+        "step": 247,
+        "transaction_count": 8,
+        "transaction_value": 6475558.04,
+        "fraud_count": 8
+      },
+      {
+        "step": 248,
+        "transaction_count": 10,
+        "transaction_value": 28243774.7,
+        "fraud_count": 10
+      },
+      {
+        "step": 249,
+        "transaction_count": 23209,
+        "transaction_value": 3792800922.78,
+        "fraud_count": 28
+      },
+      {
+        "step": 250,
+        "transaction_count": 31854,
+        "transaction_value": 6326260900.29,
+        "fraud_count": 22
+      },
+      {
+        "step": 251,
+        "transaction_count": 35269,
+        "transaction_value": 5771315721.23,
+        "fraud_count": 10
+      },
+      {
+        "step": 252,
+        "transaction_count": 35590,
+        "transaction_value": 5854918089.56,
+        "fraud_count": 2
+      },
+      {
+        "step": 253,
+        "transaction_count": 33311,
+        "transaction_value": 5942227724.38,
+        "fraud_count": 10
+      },
+      {
+        "step": 254,
+        "transaction_count": 29553,
+        "transaction_value": 4521637821.26,
+        "fraud_count": 10
+      },
+      {
+        "step": 255,
+        "transaction_count": 28840,
+        "transaction_value": 3974800979.95,
+        "fraud_count": 8
+      },
+      {
+        "step": 256,
+        "transaction_count": 28570,
+        "transaction_value": 3918809333.85,
+        "fraud_count": 8
+      },
+      {
+        "step": 257,
+        "transaction_count": 26843,
+        "transaction_value": 3605125811.29,
+        "fraud_count": 6
+      },
+      {
+        "step": 258,
+        "transaction_count": 27662,
+        "transaction_value": 3583780336.6,
+        "fraud_count": 8
+      },
+      {
+        "step": 259,
+        "transaction_count": 43328,
+        "transaction_value": 5076897554.77,
+        "fraud_count": 10
+      },
+      {
+        "step": 260,
+        "transaction_count": 33674,
+        "transaction_value": 3787449731.79,
+        "fraud_count": 12
+      },
+      {
+        "step": 261,
+        "transaction_count": 14420,
+        "transaction_value": 1569022159.21,
+        "fraud_count": 20
+      },
+      {
+        "step": 262,
+        "transaction_count": 11125,
+        "transaction_value": 1221492417.02,
+        "fraud_count": 22
+      },
+      {
+        "step": 263,
+        "transaction_count": 8021,
+        "transaction_value": 685238193.2,
+        "fraud_count": 6
+      },
+      {
+        "step": 264,
+        "transaction_count": 4042,
+        "transaction_value": 368989231.13,
+        "fraud_count": 8
+      },
+      {
+        "step": 265,
+        "transaction_count": 1581,
+        "transaction_value": 144773162.36,
+        "fraud_count": 12
+      },
+      {
+        "step": 266,
+        "transaction_count": 767,
+        "transaction_value": 105005135.03,
+        "fraud_count": 10
+      },
+      {
+        "step": 267,
+        "transaction_count": 77,
+        "transaction_value": 54389457.77,
+        "fraud_count": 8
+      },
+      {
+        "step": 268,
+        "transaction_count": 6,
+        "transaction_value": 8090414.72,
+        "fraud_count": 6
+      },
+      {
+        "step": 269,
+        "transaction_count": 14,
+        "transaction_value": 30786900.72,
+        "fraud_count": 14
+      },
+      {
+        "step": 270,
+        "transaction_count": 16,
+        "transaction_value": 7453709.26,
+        "fraud_count": 16
+      },
+      {
+        "step": 271,
+        "transaction_count": 12,
+        "transaction_value": 21611875.28,
+        "fraud_count": 12
+      },
+      {
+        "step": 272,
+        "transaction_count": 12,
+        "transaction_value": 14762929.3,
+        "fraud_count": 12
+      },
+      {
+        "step": 273,
+        "transaction_count": 7871,
+        "transaction_value": 1057528069.92,
+        "fraud_count": 20
+      },
+      {
+        "step": 274,
+        "transaction_count": 19202,
+        "transaction_value": 2826244635.49,
+        "fraud_count": 20
+      },
+      {
+        "step": 275,
+        "transaction_count": 24797,
+        "transaction_value": 3508304287.57,
+        "fraud_count": 10
+      },
+      {
+        "step": 276,
+        "transaction_count": 26383,
+        "transaction_value": 4412622274.43,
+        "fraud_count": 10
+      },
+      {
+        "step": 277,
+        "transaction_count": 25925,
+        "transaction_value": 4044242654.87,
+        "fraud_count": 14
+      },
+      {
+        "step": 278,
+        "transaction_count": 25737,
+        "transaction_value": 4022655172.18,
+        "fraud_count": 4
+      },
+      {
+        "step": 279,
+        "transaction_count": 25925,
+        "transaction_value": 4231256216.76,
+        "fraud_count": 22
+      },
+      {
+        "step": 280,
+        "transaction_count": 25956,
+        "transaction_value": 4068126710.03,
+        "fraud_count": 4
+      },
+      {
+        "step": 281,
+        "transaction_count": 27778,
+        "transaction_value": 4504317592.53,
+        "fraud_count": 18
+      },
+      {
+        "step": 282,
+        "transaction_count": 31118,
+        "transaction_value": 5081155730.24,
+        "fraud_count": 18
+      },
+      {
+        "step": 283,
+        "transaction_count": 36644,
+        "transaction_value": 6258571159.98,
+        "fraud_count": 8
+      },
+      {
+        "step": 284,
+        "transaction_count": 33449,
+        "transaction_value": 5923047332.08,
+        "fraud_count": 16
+      },
+      {
+        "step": 285,
+        "transaction_count": 14266,
+        "transaction_value": 2842978700.69,
+        "fraud_count": 16
+      },
+      {
+        "step": 286,
+        "transaction_count": 11333,
+        "transaction_value": 2435387156.5,
+        "fraud_count": 8
+      },
+      {
+        "step": 287,
+        "transaction_count": 6889,
+        "transaction_value": 1444658464.92,
+        "fraud_count": 10
+      },
+      {
+        "step": 288,
+        "transaction_count": 4018,
+        "transaction_value": 940528731.73,
+        "fraud_count": 10
+      },
+      {
+        "step": 289,
+        "transaction_count": 1437,
+        "transaction_value": 200942836.62,
+        "fraud_count": 12
+      },
+      {
+        "step": 290,
+        "transaction_count": 487,
+        "transaction_value": 52148206.04,
+        "fraud_count": 8
+      },
+      {
+        "step": 291,
+        "transaction_count": 44,
+        "transaction_value": 55410020.12,
+        "fraud_count": 10
+      },
+      {
+        "step": 292,
+        "transaction_count": 8,
+        "transaction_value": 6010883.12,
+        "fraud_count": 8
+      },
+      {
+        "step": 293,
+        "transaction_count": 4,
+        "transaction_value": 1529597.5,
+        "fraud_count": 4
+      },
+      {
+        "step": 294,
+        "transaction_count": 18,
+        "transaction_value": 26816796.080000002,
+        "fraud_count": 18
+      },
+      {
+        "step": 295,
+        "transaction_count": 10,
+        "transaction_value": 13248845.16,
+        "fraud_count": 10
+      },
+      {
+        "step": 296,
+        "transaction_count": 22,
+        "transaction_value": 49873410.0,
+        "fraud_count": 22
+      },
+      {
+        "step": 297,
+        "transaction_count": 20609,
+        "transaction_value": 6011228116.56,
+        "fraud_count": 8
+      },
+      {
+        "step": 298,
+        "transaction_count": 29579,
+        "transaction_value": 9417978632.75,
+        "fraud_count": 4
+      },
+      {
+        "step": 299,
+        "transaction_count": 31940,
+        "transaction_value": 8851568808.7,
+        "fraud_count": 10
+      },
+      {
+        "step": 300,
+        "transaction_count": 31176,
+        "transaction_value": 9602057363.44,
+        "fraud_count": 8
+      },
+      {
+        "step": 301,
+        "transaction_count": 30881,
+        "transaction_value": 8875641423.12,
+        "fraud_count": 4
+      },
+      {
+        "step": 302,
+        "transaction_count": 29127,
+        "transaction_value": 9284963497.21,
+        "fraud_count": 8
+      },
+      {
+        "step": 303,
+        "transaction_count": 24714,
+        "transaction_value": 11724714959.12,
+        "fraud_count": 14
+      },
+      {
+        "step": 304,
+        "transaction_count": 26697,
+        "transaction_value": 24963550343.94,
+        "fraud_count": 2
+      },
+      {
+        "step": 305,
+        "transaction_count": 34595,
+        "transaction_value": 19005246565.95,
+        "fraud_count": 14
+      },
+      {
+        "step": 306,
+        "transaction_count": 43615,
+        "transaction_value": 7955426526.72,
+        "fraud_count": 12
+      },
+      {
+        "step": 307,
+        "transaction_count": 46968,
+        "transaction_value": 8512005039.48,
+        "fraud_count": 16
+      },
+      {
+        "step": 308,
+        "transaction_count": 36983,
+        "transaction_value": 6343967072.68,
+        "fraud_count": 6
+      },
+      {
+        "step": 309,
+        "transaction_count": 15147,
+        "transaction_value": 2901153885.82,
+        "fraud_count": 8
+      },
+      {
+        "step": 310,
+        "transaction_count": 11393,
+        "transaction_value": 2351222355.06,
+        "fraud_count": 10
+      },
+      {
+        "step": 311,
+        "transaction_count": 9863,
+        "transaction_value": 1843736745.94,
+        "fraud_count": 16
+      },
+      {
+        "step": 312,
+        "transaction_count": 3266,
+        "transaction_value": 622626160.82,
+        "fraud_count": 10
+      },
+      {
+        "step": 313,
+        "transaction_count": 1305,
+        "transaction_value": 264148736.08,
+        "fraud_count": 10
+      },
+      {
+        "step": 314,
+        "transaction_count": 512,
+        "transaction_value": 70940145.76,
+        "fraud_count": 6
+      },
+      {
+        "step": 315,
+        "transaction_count": 12,
+        "transaction_value": 33201719.299999997,
+        "fraud_count": 12
+      },
+      {
+        "step": 316,
+        "transaction_count": 12,
+        "transaction_value": 9279425.26,
+        "fraud_count": 12
+      },
+      {
+        "step": 317,
+        "transaction_count": 20,
+        "transaction_value": 6354087.94,
+        "fraud_count": 20
+      },
+      {
+        "step": 318,
+        "transaction_count": 6,
+        "transaction_value": 3384709.38,
+        "fraud_count": 6
+      },
+      {
+        "step": 319,
+        "transaction_count": 8,
+        "transaction_value": 12220382.46,
+        "fraud_count": 8
+      },
+      {
+        "step": 320,
+        "transaction_count": 14,
+        "transaction_value": 20764447.78,
+        "fraud_count": 14
+      },
+      {
+        "step": 321,
+        "transaction_count": 17768,
+        "transaction_value": 4616167707.85,
+        "fraud_count": 8
+      },
+      {
+        "step": 322,
+        "transaction_count": 27147,
+        "transaction_value": 7614594107.81,
+        "fraud_count": 16
+      },
+      {
+        "step": 323,
+        "transaction_count": 29884,
+        "transaction_value": 7861111520.1,
+        "fraud_count": 10
+      },
+      {
+        "step": 324,
+        "transaction_count": 29430,
+        "transaction_value": 7306624172.49,
+        "fraud_count": 10
+      },
+      {
+        "step": 325,
+        "transaction_count": 27901,
+        "transaction_value": 7416314396.78,
+        "fraud_count": 10
+      },
+      {
+        "step": 326,
+        "transaction_count": 26655,
+        "transaction_value": 8548289956.85,
+        "fraud_count": 14
+      },
+      {
+        "step": 327,
+        "transaction_count": 25183,
+        "transaction_value": 14324072141.33,
+        "fraud_count": 10
+      },
+      {
+        "step": 328,
+        "transaction_count": 26877,
+        "transaction_value": 11647709104.03,
+        "fraud_count": 18
+      },
+      {
+        "step": 329,
+        "transaction_count": 32161,
+        "transaction_value": 6102660553.07,
+        "fraud_count": 6
+      },
+      {
+        "step": 330,
+        "transaction_count": 36682,
+        "transaction_value": 5933645454.24,
+        "fraud_count": 10
+      },
+      {
+        "step": 331,
+        "transaction_count": 40186,
+        "transaction_value": 6407948389.01,
+        "fraud_count": 6
+      },
+      {
+        "step": 332,
+        "transaction_count": 36156,
+        "transaction_value": 5232580956.62,
+        "fraud_count": 6
+      },
+      {
+        "step": 333,
+        "transaction_count": 14553,
+        "transaction_value": 2519375123.84,
+        "fraud_count": 8
+      },
+      {
+        "step": 334,
+        "transaction_count": 12016,
+        "transaction_value": 1965439321.87,
+        "fraud_count": 4
+      },
+      {
+        "step": 335,
+        "transaction_count": 10456,
+        "transaction_value": 1650698226.65,
+        "fraud_count": 4
+      },
+      {
+        "step": 336,
+        "transaction_count": 2932,
+        "transaction_value": 469835508.28,
+        "fraud_count": 18
+      },
+      {
+        "step": 337,
+        "transaction_count": 320,
+        "transaction_value": 37511725.73,
+        "fraud_count": 10
+      },
+      {
+        "step": 338,
+        "transaction_count": 529,
+        "transaction_value": 54096226.839999996,
+        "fraud_count": 4
+      },
+      {
+        "step": 339,
+        "transaction_count": 10,
+        "transaction_value": 4839777.76,
+        "fraud_count": 10
+      },
+      {
+        "step": 340,
+        "transaction_count": 10,
+        "transaction_value": 20576578.259999998,
+        "fraud_count": 10
+      },
+      {
+        "step": 341,
+        "transaction_count": 10,
+        "transaction_value": 9681273.68,
+        "fraud_count": 10
+      },
+      {
+        "step": 342,
+        "transaction_count": 14,
+        "transaction_value": 2872763.5,
+        "fraud_count": 14
+      },
+      {
+        "step": 343,
+        "transaction_count": 12,
+        "transaction_value": 5299923.58,
+        "fraud_count": 12
+      },
+      {
+        "step": 344,
+        "transaction_count": 6,
+        "transaction_value": 5246154.58,
+        "fraud_count": 6
+      },
+      {
+        "step": 345,
+        "transaction_count": 14670,
+        "transaction_value": 3775109118.91,
+        "fraud_count": 12
+      },
+      {
+        "step": 346,
+        "transaction_count": 26073,
+        "transaction_value": 5826660716.37,
+        "fraud_count": 6
+      },
+      {
+        "step": 347,
+        "transaction_count": 30222,
+        "transaction_value": 6964456131.76,
+        "fraud_count": 0
+      },
+      {
+        "step": 348,
+        "transaction_count": 29467,
+        "transaction_value": 7929207505.03,
+        "fraud_count": 8
+      },
+      {
+        "step": 349,
+        "transaction_count": 29552,
+        "transaction_value": 5701716349.72,
+        "fraud_count": 18
+      },
+      {
+        "step": 350,
+        "transaction_count": 28245,
+        "transaction_value": 5640295178.53,
+        "fraud_count": 14
+      },
+      {
+        "step": 351,
+        "transaction_count": 26927,
+        "transaction_value": 5172213957.19,
+        "fraud_count": 18
+      },
+      {
+        "step": 352,
+        "transaction_count": 27139,
+        "transaction_value": 5047833554.76,
+        "fraud_count": 16
+      },
+      {
+        "step": 353,
+        "transaction_count": 30420,
+        "transaction_value": 6779388634.99,
+        "fraud_count": 8
+      },
+      {
+        "step": 354,
+        "transaction_count": 40696,
+        "transaction_value": 6965215256.25,
+        "fraud_count": 12
+      },
+      {
+        "step": 355,
+        "transaction_count": 44787,
+        "transaction_value": 7234253609.7,
+        "fraud_count": 8
+      },
+      {
+        "step": 356,
+        "transaction_count": 33528,
+        "transaction_value": 4693535568.26,
+        "fraud_count": 6
+      },
+      {
+        "step": 357,
+        "transaction_count": 15096,
+        "transaction_value": 2291105832.49,
+        "fraud_count": 18
+      },
+      {
+        "step": 358,
+        "transaction_count": 12050,
+        "transaction_value": 1754502433.76,
+        "fraud_count": 10
+      },
+      {
+        "step": 359,
+        "transaction_count": 7991,
+        "transaction_value": 1081719923.47,
+        "fraud_count": 12
+      },
+      {
+        "step": 360,
+        "transaction_count": 3508,
+        "transaction_value": 475026460.95,
+        "fraud_count": 8
+      },
+      {
+        "step": 361,
+        "transaction_count": 1441,
+        "transaction_value": 170127306.87,
+        "fraud_count": 14
+      },
+      {
+        "step": 362,
+        "transaction_count": 504,
+        "transaction_value": 120469553.48,
+        "fraud_count": 20
+      },
+      {
+        "step": 363,
+        "transaction_count": 14,
+        "transaction_value": 38027813.68,
+        "fraud_count": 14
+      },
+      {
+        "step": 364,
+        "transaction_count": 6,
+        "transaction_value": 7708375.62,
+        "fraud_count": 6
+      },
+      {
+        "step": 365,
+        "transaction_count": 14,
+        "transaction_value": 18737996.099999998,
+        "fraud_count": 14
+      },
+      {
+        "step": 366,
+        "transaction_count": 10,
+        "transaction_value": 23250735.88,
+        "fraud_count": 10
+      },
+      {
+        "step": 367,
+        "transaction_count": 14,
+        "transaction_value": 6965470.32,
+        "fraud_count": 14
+      },
+      {
+        "step": 368,
+        "transaction_count": 6,
+        "transaction_value": 2900938.6799999997,
+        "fraud_count": 6
+      },
+      {
+        "step": 369,
+        "transaction_count": 14490,
+        "transaction_value": 3283341857.45,
+        "fraud_count": 6
+      },
+      {
+        "step": 370,
+        "transaction_count": 25429,
+        "transaction_value": 6337254252.83,
+        "fraud_count": 18
+      },
+      {
+        "step": 371,
+        "transaction_count": 28388,
+        "transaction_value": 5968864151.18,
+        "fraud_count": 6
+      },
+      {
+        "step": 372,
+        "transaction_count": 29515,
+        "transaction_value": 5506549073.95,
+        "fraud_count": 8
+      },
+      {
+        "step": 373,
+        "transaction_count": 28853,
+        "transaction_value": 5407533849.39,
+        "fraud_count": 12
+      },
+      {
+        "step": 374,
+        "transaction_count": 27727,
+        "transaction_value": 5003598395.76,
+        "fraud_count": 14
+      },
+      {
+        "step": 375,
+        "transaction_count": 26103,
+        "transaction_value": 5510846318.73,
+        "fraud_count": 10
+      },
+      {
+        "step": 376,
+        "transaction_count": 20122,
+        "transaction_value": 6138973352.87,
+        "fraud_count": 4
+      },
+      {
+        "step": 377,
+        "transaction_count": 18183,
+        "transaction_value": 2963739223.12,
+        "fraud_count": 10
+      },
+      {
+        "step": 378,
+        "transaction_count": 37127,
+        "transaction_value": 5531479167.98,
+        "fraud_count": 4
+      },
+      {
+        "step": 379,
+        "transaction_count": 41759,
+        "transaction_value": 5847754144.07,
+        "fraud_count": 16
+      },
+      {
+        "step": 380,
+        "transaction_count": 37693,
+        "transaction_value": 4803245990.13,
+        "fraud_count": 14
+      },
+      {
+        "step": 381,
+        "transaction_count": 14961,
+        "transaction_value": 2043308095.19,
+        "fraud_count": 4
+      },
+      {
+        "step": 382,
+        "transaction_count": 11829,
+        "transaction_value": 1657430074.48,
+        "fraud_count": 8
+      },
+      {
+        "step": 383,
+        "transaction_count": 7818,
+        "transaction_value": 1055020916.85,
+        "fraud_count": 14
+      },
+      {
+        "step": 384,
+        "transaction_count": 3588,
+        "transaction_value": 443414417.79,
+        "fraud_count": 6
+      },
+      {
+        "step": 385,
+        "transaction_count": 1419,
+        "transaction_value": 142296140.07,
+        "fraud_count": 8
+      },
+      {
+        "step": 386,
+        "transaction_count": 633,
+        "transaction_value": 131912135.28,
+        "fraud_count": 16
+      },
+      {
+        "step": 387,
+        "transaction_count": 28,
+        "transaction_value": 147237648.39,
+        "fraud_count": 28
+      },
+      {
+        "step": 388,
+        "transaction_count": 18,
+        "transaction_value": 34064057.06,
+        "fraud_count": 18
+      },
+      {
+        "step": 389,
+        "transaction_count": 10,
+        "transaction_value": 25595859.9,
+        "fraud_count": 10
+      },
+      {
+        "step": 390,
+        "transaction_count": 12,
+        "transaction_value": 17235988.42,
+        "fraud_count": 12
+      },
+      {
+        "step": 391,
+        "transaction_count": 12,
+        "transaction_value": 13642966.84,
+        "fraud_count": 12
+      },
+      {
+        "step": 392,
+        "transaction_count": 10,
+        "transaction_value": 7935358.76,
+        "fraud_count": 10
+      },
+      {
+        "step": 393,
+        "transaction_count": 19269,
+        "transaction_value": 4577025882.6,
+        "fraud_count": 4
+      },
+      {
+        "step": 394,
+        "transaction_count": 28959,
+        "transaction_value": 6433780283.85,
+        "fraud_count": 10
+      },
+      {
+        "step": 395,
+        "transaction_count": 22797,
+        "transaction_value": 3912610392.82,
+        "fraud_count": 8
+      },
+      {
+        "step": 396,
+        "transaction_count": 34075,
+        "transaction_value": 6436763739.34,
+        "fraud_count": 8
+      },
+      {
+        "step": 397,
+        "transaction_count": 30348,
+        "transaction_value": 5915512509.77,
+        "fraud_count": 10
+      },
+      {
+        "step": 398,
+        "transaction_count": 26656,
+        "transaction_value": 5024591202.61,
+        "fraud_count": 26
+      },
+      {
+        "step": 399,
+        "transaction_count": 30223,
+        "transaction_value": 5917459225.07,
+        "fraud_count": 12
+      },
+      {
+        "step": 400,
+        "transaction_count": 30910,
+        "transaction_value": 5608205263.28,
+        "fraud_count": 16
+      },
+      {
+        "step": 401,
+        "transaction_count": 33468,
+        "transaction_value": 5718920109.12,
+        "fraud_count": 16
+      },
+      {
+        "step": 402,
+        "transaction_count": 40218,
+        "transaction_value": 6596385476.64,
+        "fraud_count": 12
+      },
+      {
+        "step": 403,
+        "transaction_count": 45155,
+        "transaction_value": 6746761157.95,
+        "fraud_count": 16
+      },
+      {
+        "step": 404,
+        "transaction_count": 36726,
+        "transaction_value": 4862065083.49,
+        "fraud_count": 18
+      },
+      {
+        "step": 405,
+        "transaction_count": 16604,
+        "transaction_value": 2252761583.91,
+        "fraud_count": 10
+      },
+      {
+        "step": 406,
+        "transaction_count": 12023,
+        "transaction_value": 1737107629.18,
+        "fraud_count": 24
+      },
+      {
+        "step": 407,
+        "transaction_count": 7937,
+        "transaction_value": 970894107.08,
+        "fraud_count": 6
+      },
+      {
+        "step": 408,
+        "transaction_count": 8256,
+        "transaction_value": 1019370201.37,
+        "fraud_count": 10
+      },
+      {
+        "step": 409,
+        "transaction_count": 483,
+        "transaction_value": 124249603.63,
+        "fraud_count": 20
+      },
+      {
+        "step": 410,
+        "transaction_count": 20,
+        "transaction_value": 28815915.8,
+        "fraud_count": 20
+      },
+      {
+        "step": 411,
+        "transaction_count": 16,
+        "transaction_value": 44434467.26,
+        "fraud_count": 16
+      },
+      {
+        "step": 412,
+        "transaction_count": 8,
+        "transaction_value": 6931488.54,
+        "fraud_count": 8
+      },
+      {
+        "step": 413,
+        "transaction_count": 289,
+        "transaction_value": 56035634.04,
+        "fraud_count": 14
+      },
+      {
+        "step": 414,
+        "transaction_count": 16,
+        "transaction_value": 40395346.04,
+        "fraud_count": 16
+      },
+      {
+        "step": 415,
+        "transaction_count": 16,
+        "transaction_value": 11738866.76,
+        "fraud_count": 16
+      },
+      {
+        "step": 416,
+        "transaction_count": 2182,
+        "transaction_value": 345168018.54,
+        "fraud_count": 8
+      },
+      {
+        "step": 417,
+        "transaction_count": 6,
+        "transaction_value": 6632519.28,
+        "fraud_count": 6
+      },
+      {
+        "step": 418,
+        "transaction_count": 6,
+        "transaction_value": 2758272.86,
+        "fraud_count": 6
+      },
+      {
+        "step": 419,
+        "transaction_count": 1257,
+        "transaction_value": 193638577.05,
+        "fraud_count": 10
+      },
+      {
+        "step": 420,
+        "transaction_count": 2620,
+        "transaction_value": 516175683.2,
+        "fraud_count": 12
+      },
+      {
+        "step": 421,
+        "transaction_count": 14,
+        "transaction_value": 54903247.38,
+        "fraud_count": 14
+      },
+      {
+        "step": 422,
+        "transaction_count": 1259,
+        "transaction_value": 243906571.78,
+        "fraud_count": 10
+      },
+      {
+        "step": 423,
+        "transaction_count": 766,
+        "transaction_value": 121423443.11,
+        "fraud_count": 6
+      },
+      {
+        "step": 424,
+        "transaction_count": 14,
+        "transaction_value": 23591968.12,
+        "fraud_count": 14
+      },
+      {
+        "step": 425,
+        "transaction_count": 28,
+        "transaction_value": 110298471.23,
+        "fraud_count": 28
+      },
+      {
+        "step": 426,
+        "transaction_count": 5139,
+        "transaction_value": 888380417.69,
+        "fraud_count": 2
+      },
+      {
+        "step": 427,
+        "transaction_count": 14,
+        "transaction_value": 22280093.62,
+        "fraud_count": 14
+      },
+      {
+        "step": 428,
+        "transaction_count": 2792,
+        "transaction_value": 369181208.02,
+        "fraud_count": 6
+      },
+      {
+        "step": 429,
+        "transaction_count": 2357,
+        "transaction_value": 306539468.2,
+        "fraud_count": 4
+      },
+      {
+        "step": 430,
+        "transaction_count": 8,
+        "transaction_value": 13356935.2,
+        "fraud_count": 8
+      },
+      {
+        "step": 431,
+        "transaction_count": 1685,
+        "transaction_value": 176579531.52,
+        "fraud_count": 6
+      },
+      {
+        "step": 432,
+        "transaction_count": 4,
+        "transaction_value": 4115551.48,
+        "fraud_count": 4
+      },
+      {
+        "step": 433,
+        "transaction_count": 6,
+        "transaction_value": 3740353.9,
+        "fraud_count": 6
+      },
+      {
+        "step": 434,
+        "transaction_count": 8,
+        "transaction_value": 15066379.4,
+        "fraud_count": 8
+      },
+      {
+        "step": 435,
+        "transaction_count": 4,
+        "transaction_value": 3018541.02,
+        "fraud_count": 4
+      },
+      {
+        "step": 436,
+        "transaction_count": 248,
+        "transaction_value": 57243868.85,
+        "fraud_count": 16
+      },
+      {
+        "step": 437,
+        "transaction_count": 16,
+        "transaction_value": 24046445.4,
+        "fraud_count": 16
+      },
+      {
+        "step": 438,
+        "transaction_count": 12,
+        "transaction_value": 13988340.3,
+        "fraud_count": 12
+      },
+      {
+        "step": 439,
+        "transaction_count": 883,
+        "transaction_value": 90178693.02,
+        "fraud_count": 12
+      },
+      {
+        "step": 440,
+        "transaction_count": 18,
+        "transaction_value": 106424896.32,
+        "fraud_count": 18
+      },
+      {
+        "step": 441,
+        "transaction_count": 10,
+        "transaction_value": 16704956.4,
+        "fraud_count": 10
+      },
+      {
+        "step": 442,
+        "transaction_count": 1222,
+        "transaction_value": 150273831.39,
+        "fraud_count": 12
+      },
+      {
+        "step": 443,
+        "transaction_count": 10,
+        "transaction_value": 9883266.22,
+        "fraud_count": 10
+      },
+      {
+        "step": 444,
+        "transaction_count": 20,
+        "transaction_value": 55929981.0,
+        "fraud_count": 20
+      },
+      {
+        "step": 445,
+        "transaction_count": 64,
+        "transaction_value": 20604103.080000002,
+        "fraud_count": 6
+      },
+      {
+        "step": 446,
+        "transaction_count": 12,
+        "transaction_value": 23247205.759999998,
+        "fraud_count": 12
+      },
+      {
+        "step": 447,
+        "transaction_count": 10,
+        "transaction_value": 17027129.52,
+        "fraud_count": 10
+      },
+      {
+        "step": 448,
+        "transaction_count": 2548,
+        "transaction_value": 382255817.02,
+        "fraud_count": 6
+      },
+      {
+        "step": 449,
+        "transaction_count": 1194,
+        "transaction_value": 168249336.65,
+        "fraud_count": 6
+      },
+      {
+        "step": 450,
+        "transaction_count": 16,
+        "transaction_value": 42903268.1,
+        "fraud_count": 16
+      },
+      {
+        "step": 451,
+        "transaction_count": 3751,
+        "transaction_value": 523928034.91,
+        "fraud_count": 4
+      },
+      {
+        "step": 452,
+        "transaction_count": 308,
+        "transaction_value": 62669683.02,
+        "fraud_count": 10
+      },
+      {
+        "step": 453,
+        "transaction_count": 59,
+        "transaction_value": 20125779.259999998,
+        "fraud_count": 8
+      },
+      {
+        "step": 454,
+        "transaction_count": 39,
+        "transaction_value": 13318758.34,
+        "fraud_count": 6
+      },
+      {
+        "step": 455,
+        "transaction_count": 824,
+        "transaction_value": 84116910.54,
+        "fraud_count": 10
+      },
+      {
+        "step": 456,
+        "transaction_count": 18,
+        "transaction_value": 31949963.72,
+        "fraud_count": 18
+      },
+      {
+        "step": 457,
+        "transaction_count": 10,
+        "transaction_value": 4996140.54,
+        "fraud_count": 10
+      },
+      {
+        "step": 458,
+        "transaction_count": 438,
+        "transaction_value": 40738860.82,
+        "fraud_count": 6
+      },
+      {
+        "step": 459,
+        "transaction_count": 8,
+        "transaction_value": 2962101.96,
+        "fraud_count": 8
+      },
+      {
+        "step": 460,
+        "transaction_count": 59,
+        "transaction_value": 21889297.82,
+        "fraud_count": 16
+      },
+      {
+        "step": 461,
+        "transaction_count": 83,
+        "transaction_value": 38674234.93,
+        "fraud_count": 16
+      },
+      {
+        "step": 462,
+        "transaction_count": 16,
+        "transaction_value": 12933930.56,
+        "fraud_count": 16
+      },
+      {
+        "step": 463,
+        "transaction_count": 10,
+        "transaction_value": 15575691.76,
+        "fraud_count": 10
+      },
+      {
+        "step": 464,
+        "transaction_count": 16,
+        "transaction_value": 19647849.88,
+        "fraud_count": 16
+      },
+      {
+        "step": 465,
+        "transaction_count": 12,
+        "transaction_value": 20195821.5,
+        "fraud_count": 12
+      },
+      {
+        "step": 466,
+        "transaction_count": 984,
+        "transaction_value": 165540424.33,
+        "fraud_count": 6
+      },
+      {
+        "step": 467,
+        "transaction_count": 12,
+        "transaction_value": 6673898.26,
+        "fraud_count": 12
+      },
+      {
+        "step": 468,
+        "transaction_count": 12,
+        "transaction_value": 8427756.38,
+        "fraud_count": 12
+      },
+      {
+        "step": 469,
+        "transaction_count": 6016,
+        "transaction_value": 1128548350.45,
+        "fraud_count": 8
+      },
+      {
+        "step": 470,
+        "transaction_count": 12,
+        "transaction_value": 13929861.700000001,
+        "fraud_count": 12
+      },
+      {
+        "step": 471,
+        "transaction_count": 2620,
+        "transaction_value": 479065942.25,
+        "fraud_count": 2
+      },
+      {
+        "step": 472,
+        "transaction_count": 84,
+        "transaction_value": 50577039.29,
+        "fraud_count": 8
+      },
+      {
+        "step": 473,
+        "transaction_count": 10,
+        "transaction_value": 1423133.56,
+        "fraud_count": 10
+      },
+      {
+        "step": 474,
+        "transaction_count": 2728,
+        "transaction_value": 578338723.62,
+        "fraud_count": 8
+      },
+      {
+        "step": 475,
+        "transaction_count": 14,
+        "transaction_value": 4167837.46,
+        "fraud_count": 14
+      },
+      {
+        "step": 476,
+        "transaction_count": 3755,
+        "transaction_value": 593405934.91,
+        "fraud_count": 8
+      },
+      {
+        "step": 477,
+        "transaction_count": 10,
+        "transaction_value": 38321192.76,
+        "fraud_count": 10
+      },
+      {
+        "step": 478,
+        "transaction_count": 1908,
+        "transaction_value": 249631132.25,
+        "fraud_count": 6
+      },
+      {
+        "step": 479,
+        "transaction_count": 904,
+        "transaction_value": 98762802.43,
+        "fraud_count": 4
+      },
+      {
+        "step": 480,
+        "transaction_count": 6,
+        "transaction_value": 1945259.1,
+        "fraud_count": 6
+      },
+      {
+        "step": 481,
+        "transaction_count": 14,
+        "transaction_value": 7476067.6,
+        "fraud_count": 14
+      },
+      {
+        "step": 482,
+        "transaction_count": 16,
+        "transaction_value": 7618253.760000001,
+        "fraud_count": 16
+      },
+      {
+        "step": 483,
+        "transaction_count": 317,
+        "transaction_value": 63937791.88,
+        "fraud_count": 8
+      },
+      {
+        "step": 484,
+        "transaction_count": 6,
+        "transaction_value": 501135.22,
+        "fraud_count": 6
+      },
+      {
+        "step": 485,
+        "transaction_count": 12,
+        "transaction_value": 16670389.879999999,
+        "fraud_count": 12
+      },
+      {
+        "step": 486,
+        "transaction_count": 8,
+        "transaction_value": 12307851.5,
+        "fraud_count": 8
+      },
+      {
+        "step": 487,
+        "transaction_count": 912,
+        "transaction_value": 112818882.03,
+        "fraud_count": 14
+      },
+      {
+        "step": 488,
+        "transaction_count": 8,
+        "transaction_value": 11535648.86,
+        "fraud_count": 8
+      },
+      {
+        "step": 489,
+        "transaction_count": 14,
+        "transaction_value": 20060606.22,
+        "fraud_count": 14
+      },
+      {
+        "step": 490,
+        "transaction_count": 3820,
+        "transaction_value": 770912131.67,
+        "fraud_count": 10
+      },
+      {
+        "step": 491,
+        "transaction_count": 12,
+        "transaction_value": 9649155.4,
+        "fraud_count": 12
+      },
+      {
+        "step": 492,
+        "transaction_count": 5119,
+        "transaction_value": 1172822465.1299999,
+        "fraud_count": 6
+      },
+      {
+        "step": 493,
+        "transaction_count": 1819,
+        "transaction_value": 422340538.14,
+        "fraud_count": 8
+      },
+      {
+        "step": 494,
+        "transaction_count": 8,
+        "transaction_value": 22656512.98,
+        "fraud_count": 8
+      },
+      {
+        "step": 495,
+        "transaction_count": 3256,
+        "transaction_value": 722693286.4,
+        "fraud_count": 16
+      },
+      {
+        "step": 496,
+        "transaction_count": 873,
+        "transaction_value": 162350118.6,
+        "fraud_count": 6
+      },
+      {
+        "step": 497,
+        "transaction_count": 20,
+        "transaction_value": 44196804.32,
+        "fraud_count": 20
+      },
+      {
+        "step": 498,
+        "transaction_count": 12,
+        "transaction_value": 42134942.8,
+        "fraud_count": 12
+      },
+      {
+        "step": 499,
+        "transaction_count": 10,
+        "transaction_value": 3823494.9,
+        "fraud_count": 10
+      },
+      {
+        "step": 500,
+        "transaction_count": 6108,
+        "transaction_value": 881206032.83,
+        "fraud_count": 4
+      },
+      {
+        "step": 501,
+        "transaction_count": 28,
+        "transaction_value": 79614672.48,
+        "fraud_count": 28
+      },
+      {
+        "step": 502,
+        "transaction_count": 313,
+        "transaction_value": 56704614.49,
+        "fraud_count": 12
+      },
+      {
+        "step": 503,
+        "transaction_count": 1878,
+        "transaction_value": 186350409.67,
+        "fraud_count": 10
+      },
+      {
+        "step": 504,
+        "transaction_count": 10,
+        "transaction_value": 10039514.88,
+        "fraud_count": 10
+      },
+      {
+        "step": 505,
+        "transaction_count": 936,
+        "transaction_value": 98603049.61,
+        "fraud_count": 8
+      },
+      {
+        "step": 506,
+        "transaction_count": 8,
+        "transaction_value": 37329805.019999996,
+        "fraud_count": 8
+      },
+      {
+        "step": 507,
+        "transaction_count": 14,
+        "transaction_value": 42107207.22,
+        "fraud_count": 14
+      },
+      {
+        "step": 508,
+        "transaction_count": 6,
+        "transaction_value": 1907268.1600000001,
+        "fraud_count": 6
+      },
+      {
+        "step": 509,
+        "transaction_count": 288,
+        "transaction_value": 48899871.07,
+        "fraud_count": 14
+      },
+      {
+        "step": 510,
+        "transaction_count": 10,
+        "transaction_value": 16351972.12,
+        "fraud_count": 10
+      },
+      {
+        "step": 511,
+        "transaction_count": 6,
+        "transaction_value": 3040983.82,
+        "fraud_count": 6
+      },
+      {
+        "step": 512,
+        "transaction_count": 12,
+        "transaction_value": 24542548.84,
+        "fraud_count": 12
+      },
+      {
+        "step": 513,
+        "transaction_count": 10,
+        "transaction_value": 4352810.34,
+        "fraud_count": 10
+      },
+      {
+        "step": 514,
+        "transaction_count": 8733,
+        "transaction_value": 1999273152.65,
+        "fraud_count": 14
+      },
+      {
+        "step": 515,
+        "transaction_count": 6,
+        "transaction_value": 854962.98,
+        "fraud_count": 6
+      },
+      {
+        "step": 516,
+        "transaction_count": 14,
+        "transaction_value": 49316030.56,
+        "fraud_count": 14
+      },
+      {
+        "step": 517,
+        "transaction_count": 1391,
+        "transaction_value": 233099715.33,
+        "fraud_count": 6
+      },
+      {
+        "step": 518,
+        "transaction_count": 3488,
+        "transaction_value": 649922857.86,
+        "fraud_count": 8
+      },
+      {
+        "step": 519,
+        "transaction_count": 12,
+        "transaction_value": 5862921.82,
+        "fraud_count": 12
+      },
+      {
+        "step": 520,
+        "transaction_count": 3037,
+        "transaction_value": 589367419.26,
+        "fraud_count": 12
+      },
+      {
+        "step": 521,
+        "transaction_count": 14,
+        "transaction_value": 11945989.74,
+        "fraud_count": 14
+      },
+      {
+        "step": 522,
+        "transaction_count": 18631,
+        "transaction_value": 3670726387.08,
+        "fraud_count": 14
+      },
+      {
+        "step": 523,
+        "transaction_count": 30,
+        "transaction_value": 69540142.4,
+        "fraud_count": 30
+      },
+      {
+        "step": 524,
+        "transaction_count": 2664,
+        "transaction_value": 367784058.74,
+        "fraud_count": 4
+      },
+      {
+        "step": 525,
+        "transaction_count": 8023,
+        "transaction_value": 956470572.52,
+        "fraud_count": 2
+      },
+      {
+        "step": 526,
+        "transaction_count": 2470,
+        "transaction_value": 272760266.42,
+        "fraud_count": 12
+      },
+      {
+        "step": 527,
+        "transaction_count": 2697,
+        "transaction_value": 275898931.96,
+        "fraud_count": 6
+      },
+      {
+        "step": 528,
+        "transaction_count": 937,
+        "transaction_value": 85319692.74,
+        "fraud_count": 14
+      },
+      {
+        "step": 529,
+        "transaction_count": 33,
+        "transaction_value": 15241906.52,
+        "fraud_count": 6
+      },
+      {
+        "step": 530,
+        "transaction_count": 409,
+        "transaction_value": 54769365.81,
+        "fraud_count": 8
+      },
+      {
+        "step": 531,
+        "transaction_count": 250,
+        "transaction_value": 57770528.47,
+        "fraud_count": 14
+      },
+      {
+        "step": 532,
+        "transaction_count": 95,
+        "transaction_value": 13926809.05,
+        "fraud_count": 6
+      },
+      {
+        "step": 533,
+        "transaction_count": 12,
+        "transaction_value": 13069443.860000001,
+        "fraud_count": 12
+      },
+      {
+        "step": 534,
+        "transaction_count": 531,
+        "transaction_value": 52014715.13,
+        "fraud_count": 12
+      },
+      {
+        "step": 535,
+        "transaction_count": 6,
+        "transaction_value": 2535105.66,
+        "fraud_count": 6
+      },
+      {
+        "step": 536,
+        "transaction_count": 12,
+        "transaction_value": 7342744.3,
+        "fraud_count": 12
+      },
+      {
+        "step": 537,
+        "transaction_count": 18,
+        "transaction_value": 7191162.739999999,
+        "fraud_count": 18
+      },
+      {
+        "step": 538,
+        "transaction_count": 3120,
+        "transaction_value": 803923598.25,
+        "fraud_count": 10
+      },
+      {
+        "step": 539,
+        "transaction_count": 4,
+        "transaction_value": 556966.14,
+        "fraud_count": 4
+      },
+      {
+        "step": 540,
+        "transaction_count": 5476,
+        "transaction_value": 1069628453.07,
+        "fraud_count": 6
+      },
+      {
+        "step": 541,
+        "transaction_count": 12,
+        "transaction_value": 43310664.08,
+        "fraud_count": 12
+      },
+      {
+        "step": 542,
+        "transaction_count": 4475,
+        "transaction_value": 763897085.02,
+        "fraud_count": 10
+      },
+      {
+        "step": 543,
+        "transaction_count": 6,
+        "transaction_value": 5380517.8,
+        "fraud_count": 6
+      },
+      {
+        "step": 544,
+        "transaction_count": 9358,
+        "transaction_value": 1644902213.31,
+        "fraud_count": 6
+      },
+      {
+        "step": 545,
+        "transaction_count": 3562,
+        "transaction_value": 545060662.95,
+        "fraud_count": 0
+      },
+      {
+        "step": 546,
+        "transaction_count": 7771,
+        "transaction_value": 1169423725.34,
+        "fraud_count": 10
+      },
+      {
+        "step": 547,
+        "transaction_count": 2261,
+        "transaction_value": 359716407.21999997,
+        "fraud_count": 8
+      },
+      {
+        "step": 548,
+        "transaction_count": 5689,
+        "transaction_value": 703318157.58,
+        "fraud_count": 2
+      },
+      {
+        "step": 549,
+        "transaction_count": 642,
+        "transaction_value": 61541864.88,
+        "fraud_count": 12
+      },
+      {
+        "step": 550,
+        "transaction_count": 4804,
+        "transaction_value": 552312295.48,
+        "fraud_count": 8
+      },
+      {
+        "step": 551,
+        "transaction_count": 949,
+        "transaction_value": 98573979.62,
+        "fraud_count": 18
+      },
+      {
+        "step": 552,
+        "transaction_count": 1517,
+        "transaction_value": 149337625.67,
+        "fraud_count": 10
+      },
+      {
+        "step": 553,
+        "transaction_count": 8,
+        "transaction_value": 4677417.0,
+        "fraud_count": 8
+      },
+      {
+        "step": 554,
+        "transaction_count": 18,
+        "transaction_value": 85876715.24,
+        "fraud_count": 18
+      },
+      {
+        "step": 555,
+        "transaction_count": 144,
+        "transaction_value": 23050207.14,
+        "fraud_count": 6
+      },
+      {
+        "step": 556,
+        "transaction_count": 6,
+        "transaction_value": 3120878.82,
+        "fraud_count": 6
+      },
+      {
+        "step": 557,
+        "transaction_count": 20,
+        "transaction_value": 19343563.1,
+        "fraud_count": 20
+      },
+      {
+        "step": 558,
+        "transaction_count": 14,
+        "transaction_value": 8472680.219999999,
+        "fraud_count": 14
+      },
+      {
+        "step": 559,
+        "transaction_count": 10,
+        "transaction_value": 8614436.24,
+        "fraud_count": 10
+      },
+      {
+        "step": 560,
+        "transaction_count": 10,
+        "transaction_value": 4471218.4399999995,
+        "fraud_count": 10
+      },
+      {
+        "step": 561,
+        "transaction_count": 16,
+        "transaction_value": 17311068.86,
+        "fraud_count": 16
+      },
+      {
+        "step": 562,
+        "transaction_count": 10,
+        "transaction_value": 34103614.62,
+        "fraud_count": 10
+      },
+      {
+        "step": 563,
+        "transaction_count": 3284,
+        "transaction_value": 680900659.41,
+        "fraud_count": 18
+      },
+      {
+        "step": 564,
+        "transaction_count": 3546,
+        "transaction_value": 593339197.85,
+        "fraud_count": 16
+      },
+      {
+        "step": 565,
+        "transaction_count": 5425,
+        "transaction_value": 929420893.75,
+        "fraud_count": 12
+      },
+      {
+        "step": 566,
+        "transaction_count": 1421,
+        "transaction_value": 210434744.41,
+        "fraud_count": 6
+      },
+      {
+        "step": 567,
+        "transaction_count": 4356,
+        "transaction_value": 692432804.61,
+        "fraud_count": 10
+      },
+      {
+        "step": 568,
+        "transaction_count": 14,
+        "transaction_value": 21012595.98,
+        "fraud_count": 14
+      },
+      {
+        "step": 569,
+        "transaction_count": 1182,
+        "transaction_value": 196460391.21,
+        "fraud_count": 14
+      },
+      {
+        "step": 570,
+        "transaction_count": 1965,
+        "transaction_value": 290204523.94,
+        "fraud_count": 10
+      },
+      {
+        "step": 571,
+        "transaction_count": 4256,
+        "transaction_value": 637073127.54,
+        "fraud_count": 10
+      },
+      {
+        "step": 572,
+        "transaction_count": 18,
+        "transaction_value": 11261178.0,
+        "fraud_count": 18
+      },
+      {
+        "step": 573,
+        "transaction_count": 3487,
+        "transaction_value": 389848074.51,
+        "fraud_count": 8
+      },
+      {
+        "step": 574,
+        "transaction_count": 2614,
+        "transaction_value": 295795973.7,
+        "fraud_count": 4
+      },
+      {
+        "step": 575,
+        "transaction_count": 8,
+        "transaction_value": 4362409.58,
+        "fraud_count": 8
+      },
+      {
+        "step": 576,
+        "transaction_count": 877,
+        "transaction_value": 81920995.88,
+        "fraud_count": 14
+      },
+      {
+        "step": 577,
+        "transaction_count": 364,
+        "transaction_value": 45191071.07,
+        "fraud_count": 12
+      },
+      {
+        "step": 578,
+        "transaction_count": 269,
+        "transaction_value": 59022160.44,
+        "fraud_count": 20
+      },
+      {
+        "step": 579,
+        "transaction_count": 12,
+        "transaction_value": 13391113.62,
+        "fraud_count": 12
+      },
+      {
+        "step": 580,
+        "transaction_count": 58,
+        "transaction_value": 16815292.89,
+        "fraud_count": 10
+      },
+      {
+        "step": 581,
+        "transaction_count": 10,
+        "transaction_value": 8109043.62,
+        "fraud_count": 10
+      },
+      {
+        "step": 582,
+        "transaction_count": 775,
+        "transaction_value": 68649688.11,
+        "fraud_count": 16
+      },
+      {
+        "step": 583,
+        "transaction_count": 16,
+        "transaction_value": 12437199.9,
+        "fraud_count": 16
+      },
+      {
+        "step": 584,
+        "transaction_count": 281,
+        "transaction_value": 42427857.93,
+        "fraud_count": 8
+      },
+      {
+        "step": 585,
+        "transaction_count": 2047,
+        "transaction_value": 299768066.48,
+        "fraud_count": 6
+      },
+      {
+        "step": 586,
+        "transaction_count": 1581,
+        "transaction_value": 317120822.11,
+        "fraud_count": 12
+      },
+      {
+        "step": 587,
+        "transaction_count": 2740,
+        "transaction_value": 543681227.43,
+        "fraud_count": 6
+      },
+      {
+        "step": 588,
+        "transaction_count": 4894,
+        "transaction_value": 775258607.31,
+        "fraud_count": 12
+      },
+      {
+        "step": 589,
+        "transaction_count": 6245,
+        "transaction_value": 1070599526.98,
+        "fraud_count": 2
+      },
+      {
+        "step": 590,
+        "transaction_count": 6584,
+        "transaction_value": 1141494285.49,
+        "fraud_count": 8
+      },
+      {
+        "step": 591,
+        "transaction_count": 57,
+        "transaction_value": 23057518.83,
+        "fraud_count": 12
+      },
+      {
+        "step": 592,
+        "transaction_count": 5373,
+        "transaction_value": 898961370.63,
+        "fraud_count": 10
+      },
+      {
+        "step": 593,
+        "transaction_count": 4,
+        "transaction_value": 795846.68,
+        "fraud_count": 4
+      },
+      {
+        "step": 594,
+        "transaction_count": 6536,
+        "transaction_value": 998077347.42,
+        "fraud_count": 10
+      },
+      {
+        "step": 595,
+        "transaction_count": 5434,
+        "transaction_value": 725710623.93,
+        "fraud_count": 12
+      },
+      {
+        "step": 596,
+        "transaction_count": 9319,
+        "transaction_value": 1459229978.32,
+        "fraud_count": 8
+      },
+      {
+        "step": 597,
+        "transaction_count": 2486,
+        "transaction_value": 334291994.35,
+        "fraud_count": 6
+      },
+      {
+        "step": 598,
+        "transaction_count": 934,
+        "transaction_value": 101198178.91,
+        "fraud_count": 4
+      },
+      {
+        "step": 599,
+        "transaction_count": 1816,
+        "transaction_value": 186384113.39,
+        "fraud_count": 6
+      },
+      {
+        "step": 600,
+        "transaction_count": 18,
+        "transaction_value": 35814392.02,
+        "fraud_count": 18
+      },
+      {
+        "step": 601,
+        "transaction_count": 865,
+        "transaction_value": 86666912.34,
+        "fraud_count": 10
+      },
+      {
+        "step": 602,
+        "transaction_count": 8,
+        "transaction_value": 5697984.22,
+        "fraud_count": 8
+      },
+      {
+        "step": 603,
+        "transaction_count": 12,
+        "transaction_value": 19318593.14,
+        "fraud_count": 12
+      },
+      {
+        "step": 604,
+        "transaction_count": 8,
+        "transaction_value": 11736101.32,
+        "fraud_count": 8
+      },
+      {
+        "step": 605,
+        "transaction_count": 16,
+        "transaction_value": 10418263.96,
+        "fraud_count": 16
+      },
+      {
+        "step": 606,
+        "transaction_count": 14,
+        "transaction_value": 29801780.8,
+        "fraud_count": 14
+      },
+      {
+        "step": 607,
+        "transaction_count": 8,
+        "transaction_value": 1402691.26,
+        "fraud_count": 8
+      },
+      {
+        "step": 608,
+        "transaction_count": 1082,
+        "transaction_value": 153163443.4,
+        "fraud_count": 16
+      },
+      {
+        "step": 609,
+        "transaction_count": 8,
+        "transaction_value": 1962933.2999999998,
+        "fraud_count": 8
+      },
+      {
+        "step": 610,
+        "transaction_count": 1199,
+        "transaction_value": 151695358.52,
+        "fraud_count": 12
+      },
+      {
+        "step": 611,
+        "transaction_count": 14,
+        "transaction_value": 7014769.8,
+        "fraud_count": 14
+      },
+      {
+        "step": 612,
+        "transaction_count": 2677,
+        "transaction_value": 442827835.17,
+        "fraud_count": 12
+      },
+      {
+        "step": 613,
+        "transaction_count": 45,
+        "transaction_value": 20714053.12,
+        "fraud_count": 20
+      },
+      {
+        "step": 614,
+        "transaction_count": 1278,
+        "transaction_value": 176103740.92,
+        "fraud_count": 16
+      },
+      {
+        "step": 615,
+        "transaction_count": 8,
+        "transaction_value": 18864296.14,
+        "fraud_count": 8
+      },
+      {
+        "step": 616,
+        "transaction_count": 6,
+        "transaction_value": 17192937.16,
+        "fraud_count": 6
+      },
+      {
+        "step": 617,
+        "transaction_count": 2680,
+        "transaction_value": 491921999.56,
+        "fraud_count": 16
+      },
+      {
+        "step": 618,
+        "transaction_count": 8,
+        "transaction_value": 4093382.08,
+        "fraud_count": 8
+      },
+      {
+        "step": 619,
+        "transaction_count": 2800,
+        "transaction_value": 379732051.64,
+        "fraud_count": 14
+      },
+      {
+        "step": 620,
+        "transaction_count": 8,
+        "transaction_value": 1470584.12,
+        "fraud_count": 8
+      },
+      {
+        "step": 621,
+        "transaction_count": 1121,
+        "transaction_value": 167092597.9,
+        "fraud_count": 18
+      },
+      {
+        "step": 622,
+        "transaction_count": 4,
+        "transaction_value": 1667642.96,
+        "fraud_count": 4
+      },
+      {
+        "step": 623,
+        "transaction_count": 6,
+        "transaction_value": 842672.1599999999,
+        "fraud_count": 6
+      },
+      {
+        "step": 624,
+        "transaction_count": 10,
+        "transaction_value": 27307081.34,
+        "fraud_count": 10
+      },
+      {
+        "step": 625,
+        "transaction_count": 24,
+        "transaction_value": 59187126.16,
+        "fraud_count": 24
+      },
+      {
+        "step": 626,
+        "transaction_count": 6,
+        "transaction_value": 265400.04,
+        "fraud_count": 6
+      },
+      {
+        "step": 627,
+        "transaction_count": 4,
+        "transaction_value": 7419082.84,
+        "fraud_count": 4
+      },
+      {
+        "step": 628,
+        "transaction_count": 6,
+        "transaction_value": 2388645.62,
+        "fraud_count": 6
+      },
+      {
+        "step": 629,
+        "transaction_count": 20,
+        "transaction_value": 27300034.54,
+        "fraud_count": 20
+      },
+      {
+        "step": 630,
+        "transaction_count": 150,
+        "transaction_value": 33632566.49,
+        "fraud_count": 4
+      },
+      {
+        "step": 631,
+        "transaction_count": 12,
+        "transaction_value": 34322908.44,
+        "fraud_count": 12
+      },
+      {
+        "step": 632,
+        "transaction_count": 8,
+        "transaction_value": 2045006.0000000002,
+        "fraud_count": 8
+      },
+      {
+        "step": 633,
+        "transaction_count": 8,
+        "transaction_value": 9469682.56,
+        "fraud_count": 8
+      },
+      {
+        "step": 634,
+        "transaction_count": 10,
+        "transaction_value": 19967336.099999998,
+        "fraud_count": 10
+      },
+      {
+        "step": 635,
+        "transaction_count": 16,
+        "transaction_value": 9757174.24,
+        "fraud_count": 16
+      },
+      {
+        "step": 636,
+        "transaction_count": 12,
+        "transaction_value": 6594877.6,
+        "fraud_count": 12
+      },
+      {
+        "step": 637,
+        "transaction_count": 3390,
+        "transaction_value": 595977588.59,
+        "fraud_count": 12
+      },
+      {
+        "step": 638,
+        "transaction_count": 14,
+        "transaction_value": 30445090.82,
+        "fraud_count": 14
+      },
+      {
+        "step": 639,
+        "transaction_count": 14,
+        "transaction_value": 3833999.26,
+        "fraud_count": 14
+      },
+      {
+        "step": 640,
+        "transaction_count": 1398,
+        "transaction_value": 235460464.64,
+        "fraud_count": 14
+      },
+      {
+        "step": 641,
+        "transaction_count": 10,
+        "transaction_value": 11484847.26,
+        "fraud_count": 10
+      },
+      {
+        "step": 642,
+        "transaction_count": 1141,
+        "transaction_value": 153551791.7,
+        "fraud_count": 8
+      },
+      {
+        "step": 643,
+        "transaction_count": 14,
+        "transaction_value": 15829698.559999999,
+        "fraud_count": 14
+      },
+      {
+        "step": 644,
+        "transaction_count": 2267,
+        "transaction_value": 331214212.58,
+        "fraud_count": 10
+      },
+      {
+        "step": 645,
+        "transaction_count": 10,
+        "transaction_value": 24279751.58,
+        "fraud_count": 10
+      },
+      {
+        "step": 646,
+        "transaction_count": 20,
+        "transaction_value": 124559607.03999999,
+        "fraud_count": 20
+      },
+      {
+        "step": 647,
+        "transaction_count": 10,
+        "transaction_value": 9725016.58,
+        "fraud_count": 10
+      },
+      {
+        "step": 648,
+        "transaction_count": 14,
+        "transaction_value": 7556887.52,
+        "fraud_count": 14
+      },
+      {
+        "step": 649,
+        "transaction_count": 263,
+        "transaction_value": 37659787.22,
+        "fraud_count": 10
+      },
+      {
+        "step": 650,
+        "transaction_count": 16,
+        "transaction_value": 15453019.1,
+        "fraud_count": 16
+      },
+      {
+        "step": 651,
+        "transaction_count": 10,
+        "transaction_value": 27449340.32,
+        "fraud_count": 10
+      },
+      {
+        "step": 652,
+        "transaction_count": 14,
+        "transaction_value": 13800111.76,
+        "fraud_count": 14
+      },
+      {
+        "step": 653,
+        "transaction_count": 8,
+        "transaction_value": 3335889.22,
+        "fraud_count": 8
+      },
+      {
+        "step": 654,
+        "transaction_count": 8,
+        "transaction_value": 4244319.9,
+        "fraud_count": 8
+      },
+      {
+        "step": 655,
+        "transaction_count": 4,
+        "transaction_value": 598814.78,
+        "fraud_count": 4
+      },
+      {
+        "step": 656,
+        "transaction_count": 1965,
+        "transaction_value": 259853656.6,
+        "fraud_count": 16
+      },
+      {
+        "step": 657,
+        "transaction_count": 10,
+        "transaction_value": 12898473.72,
+        "fraud_count": 10
+      },
+      {
+        "step": 658,
+        "transaction_count": 14,
+        "transaction_value": 22548885.34,
+        "fraud_count": 14
+      },
+      {
+        "step": 659,
+        "transaction_count": 2500,
+        "transaction_value": 873676951.75,
+        "fraud_count": 10
+      },
+      {
+        "step": 660,
+        "transaction_count": 12,
+        "transaction_value": 1937697.7799999998,
+        "fraud_count": 12
+      },
+      {
+        "step": 661,
+        "transaction_count": 4877,
+        "transaction_value": 901440925.14,
+        "fraud_count": 8
+      },
+      {
+        "step": 662,
+        "transaction_count": 2,
+        "transaction_value": 2936608.7,
+        "fraud_count": 2
+      },
+      {
+        "step": 663,
+        "transaction_count": 10,
+        "transaction_value": 3242072.3000000003,
+        "fraud_count": 10
+      },
+      {
+        "step": 664,
+        "transaction_count": 1125,
+        "transaction_value": 206521853.94,
+        "fraud_count": 20
+      },
+      {
+        "step": 665,
+        "transaction_count": 10,
+        "transaction_value": 8904817.3,
+        "fraud_count": 10
+      },
+      {
+        "step": 666,
+        "transaction_count": 6,
+        "transaction_value": 1527287.1,
+        "fraud_count": 6
+      },
+      {
+        "step": 667,
+        "transaction_count": 1400,
+        "transaction_value": 179970457.4,
+        "fraud_count": 6
+      },
+      {
+        "step": 668,
+        "transaction_count": 8,
+        "transaction_value": 26890502.8,
+        "fraud_count": 8
+      },
+      {
+        "step": 669,
+        "transaction_count": 322,
+        "transaction_value": 58813878.19,
+        "fraud_count": 8
+      },
+      {
+        "step": 670,
+        "transaction_count": 1906,
+        "transaction_value": 237652009.99,
+        "fraud_count": 12
+      },
+      {
+        "step": 671,
+        "transaction_count": 18,
+        "transaction_value": 64327964.699999996,
+        "fraud_count": 18
+      },
+      {
+        "step": 672,
+        "transaction_count": 153,
+        "transaction_value": 41032712.71,
+        "fraud_count": 8
+      },
+      {
+        "step": 673,
+        "transaction_count": 445,
+        "transaction_value": 46009039.61,
+        "fraud_count": 12
+      },
+      {
+        "step": 674,
+        "transaction_count": 14,
+        "transaction_value": 42027958.24,
+        "fraud_count": 14
+      },
+      {
+        "step": 675,
+        "transaction_count": 30,
+        "transaction_value": 42253301.82,
+        "fraud_count": 10
+      },
+      {
+        "step": 676,
+        "transaction_count": 8,
+        "transaction_value": 18117891.12,
+        "fraud_count": 8
+      },
+      {
+        "step": 677,
+        "transaction_count": 8,
+        "transaction_value": 44065100.36,
+        "fraud_count": 8
+      },
+      {
+        "step": 678,
+        "transaction_count": 6,
+        "transaction_value": 4961854.359999999,
+        "fraud_count": 6
+      },
+      {
+        "step": 679,
+        "transaction_count": 72,
+        "transaction_value": 25048646.98,
+        "fraud_count": 6
+      },
+      {
+        "step": 680,
+        "transaction_count": 22,
+        "transaction_value": 60114590.72,
+        "fraud_count": 22
+      },
+      {
+        "step": 681,
+        "transaction_count": 4703,
+        "transaction_value": 910235264.29,
+        "fraud_count": 4
+      },
+      {
+        "step": 682,
+        "transaction_count": 6,
+        "transaction_value": 877562.34,
+        "fraud_count": 6
+      },
+      {
+        "step": 683,
+        "transaction_count": 2192,
+        "transaction_value": 459245005.17,
+        "fraud_count": 8
+      },
+      {
+        "step": 684,
+        "transaction_count": 4562,
+        "transaction_value": 1484350041.8,
+        "fraud_count": 8
+      },
+      {
+        "step": 685,
+        "transaction_count": 14,
+        "transaction_value": 47544533.98,
+        "fraud_count": 14
+      },
+      {
+        "step": 686,
+        "transaction_count": 4689,
+        "transaction_value": 831815555.85,
+        "fraud_count": 16
+      },
+      {
+        "step": 687,
+        "transaction_count": 8040,
+        "transaction_value": 1366713387.51,
+        "fraud_count": 8
+      },
+      {
+        "step": 688,
+        "transaction_count": 7885,
+        "transaction_value": 1187365885.55,
+        "fraud_count": 8
+      },
+      {
+        "step": 689,
+        "transaction_count": 14,
+        "transaction_value": 20273406.88,
+        "fraud_count": 14
+      },
+      {
+        "step": 690,
+        "transaction_count": 4972,
+        "transaction_value": 702292231.94,
+        "fraud_count": 12
+      },
+      {
+        "step": 691,
+        "transaction_count": 4809,
+        "transaction_value": 614821524.29,
+        "fraud_count": 12
+      },
+      {
+        "step": 692,
+        "transaction_count": 6898,
+        "transaction_value": 833578997.72,
+        "fraud_count": 20
+      },
+      {
+        "step": 693,
+        "transaction_count": 4,
+        "transaction_value": 2965073.02,
+        "fraud_count": 4
+      },
+      {
+        "step": 694,
+        "transaction_count": 2664,
+        "transaction_value": 327597102.24,
+        "fraud_count": 24
+      },
+      {
+        "step": 695,
+        "transaction_count": 2827,
+        "transaction_value": 282980385.48,
+        "fraud_count": 10
+      },
+      {
+        "step": 696,
+        "transaction_count": 6,
+        "transaction_value": 2382110.8,
+        "fraud_count": 6
+      },
+      {
+        "step": 697,
+        "transaction_count": 12,
+        "transaction_value": 7788654.279999999,
+        "fraud_count": 12
+      },
+      {
+        "step": 698,
+        "transaction_count": 65,
+        "transaction_value": 70036302.89,
+        "fraud_count": 16
+      },
+      {
+        "step": 699,
+        "transaction_count": 55,
+        "transaction_value": 16390227.15,
+        "fraud_count": 16
+      },
+      {
+        "step": 700,
+        "transaction_count": 6,
+        "transaction_value": 2189920.66,
+        "fraud_count": 6
+      },
+      {
+        "step": 701,
+        "transaction_count": 18,
+        "transaction_value": 25820556.98,
+        "fraud_count": 18
+      },
+      {
+        "step": 702,
+        "transaction_count": 14,
+        "transaction_value": 65416667.71,
+        "fraud_count": 14
+      },
+      {
+        "step": 703,
+        "transaction_count": 8,
+        "transaction_value": 14723066.040000001,
+        "fraud_count": 8
+      },
+      {
+        "step": 704,
+        "transaction_count": 16,
+        "transaction_value": 31025756.86,
+        "fraud_count": 16
+      },
+      {
+        "step": 705,
+        "transaction_count": 2362,
+        "transaction_value": 361371329.1,
+        "fraud_count": 10
+      },
+      {
+        "step": 706,
+        "transaction_count": 4,
+        "transaction_value": 2401102.9,
+        "fraud_count": 4
+      },
+      {
+        "step": 707,
+        "transaction_count": 309,
+        "transaction_value": 59112032.05,
+        "fraud_count": 10
+      },
+      {
+        "step": 708,
+        "transaction_count": 4,
+        "transaction_value": 6459344.859999999,
+        "fraud_count": 4
+      },
+      {
+        "step": 709,
+        "transaction_count": 2313,
+        "transaction_value": 360113385.39,
+        "fraud_count": 8
+      },
+      {
+        "step": 710,
+        "transaction_count": 1788,
+        "transaction_value": 378576308.51,
+        "fraud_count": 14
+      },
+      {
+        "step": 711,
+        "transaction_count": 8,
+        "transaction_value": 14371325.16,
+        "fraud_count": 8
+      },
+      {
+        "step": 712,
+        "transaction_count": 23,
+        "transaction_value": 5062673.81,
+        "fraud_count": 12
+      },
+      {
+        "step": 713,
+        "transaction_count": 8,
+        "transaction_value": 14119525.3,
+        "fraud_count": 8
+      },
+      {
+        "step": 714,
+        "transaction_count": 681,
+        "transaction_value": 124975261.94,
+        "fraud_count": 14
+      },
+      {
+        "step": 715,
+        "transaction_count": 1879,
+        "transaction_value": 246325271.49,
+        "fraud_count": 10
+      },
+      {
+        "step": 716,
+        "transaction_count": 140,
+        "transaction_value": 32909274.65,
+        "fraud_count": 8
+      },
+      {
+        "step": 717,
+        "transaction_count": 632,
+        "transaction_value": 57639917.81,
+        "fraud_count": 12
+      },
+      {
+        "step": 718,
+        "transaction_count": 918,
+        "transaction_value": 78195898.53,
+        "fraud_count": 16
+      },
+      {
+        "step": 719,
+        "transaction_count": 14,
+        "transaction_value": 19259355.64,
+        "fraud_count": 14
+      },
+      {
+        "step": 720,
+        "transaction_count": 10,
+        "transaction_value": 1617246.4599999997,
+        "fraud_count": 10
+      },
+      {
+        "step": 721,
+        "transaction_count": 4,
+        "transaction_value": 189712.36,
+        "fraud_count": 4
+      },
+      {
+        "step": 722,
+        "transaction_count": 10,
+        "transaction_value": 9511315.58,
+        "fraud_count": 10
+      },
+      {
+        "step": 723,
+        "transaction_count": 14,
+        "transaction_value": 20923093.02,
+        "fraud_count": 14
+      },
+      {
+        "step": 724,
+        "transaction_count": 14,
+        "transaction_value": 6120113.76,
+        "fraud_count": 14
+      },
+      {
+        "step": 725,
+        "transaction_count": 4,
+        "transaction_value": 1993163.7,
+        "fraud_count": 4
+      },
+      {
+        "step": 726,
+        "transaction_count": 22,
+        "transaction_value": 20213984.4,
+        "fraud_count": 22
+      },
+      {
+        "step": 727,
+        "transaction_count": 12,
+        "transaction_value": 15852217.1,
+        "fraud_count": 12
+      },
+      {
+        "step": 728,
+        "transaction_count": 10,
+        "transaction_value": 21656065.24,
+        "fraud_count": 10
+      },
+      {
+        "step": 729,
+        "transaction_count": 4,
+        "transaction_value": 2385956.5799999996,
+        "fraud_count": 4
+      },
+      {
+        "step": 730,
+        "transaction_count": 28,
+        "transaction_value": 115003435.05,
+        "fraud_count": 28
+      },
+      {
+        "step": 731,
+        "transaction_count": 16,
+        "transaction_value": 3880955.34,
+        "fraud_count": 16
+      },
+      {
+        "step": 732,
+        "transaction_count": 10,
+        "transaction_value": 4391950.92,
+        "fraud_count": 10
+      },
+      {
+        "step": 733,
+        "transaction_count": 10,
+        "transaction_value": 6113203.279999999,
+        "fraud_count": 10
+      },
+      {
+        "step": 734,
+        "transaction_count": 8,
+        "transaction_value": 27827406.36,
+        "fraud_count": 8
+      },
+      {
+        "step": 735,
+        "transaction_count": 12,
+        "transaction_value": 3155523.32,
+        "fraud_count": 12
+      },
+      {
+        "step": 736,
+        "transaction_count": 14,
+        "transaction_value": 32530967.34,
+        "fraud_count": 14
+      },
+      {
+        "step": 737,
+        "transaction_count": 10,
+        "transaction_value": 9560119.88,
+        "fraud_count": 10
+      },
+      {
+        "step": 738,
+        "transaction_count": 10,
+        "transaction_value": 2883702.98,
+        "fraud_count": 10
+      },
+      {
+        "step": 739,
+        "transaction_count": 10,
+        "transaction_value": 16587831.36,
+        "fraud_count": 10
+      },
+      {
+        "step": 740,
+        "transaction_count": 6,
+        "transaction_value": 7632963.58,
+        "fraud_count": 6
+      },
+      {
+        "step": 741,
+        "transaction_count": 22,
+        "transaction_value": 87828992.99,
+        "fraud_count": 22
+      },
+      {
+        "step": 742,
+        "transaction_count": 14,
+        "transaction_value": 14323735.200000001,
+        "fraud_count": 14
+      },
+      {
+        "step": 743,
+        "transaction_count": 8,
+        "transaction_value": 17519825.5,
+        "fraud_count": 8
+      }
+    ],
+    "high_value_transaction_statistics": {
+      "threshold_99th_percentile": 1615979.4715999917,
+      "transaction_count": 63627,
+      "total_value": 249403237614.46,
+      "average_amount": 3919770.5001722537,
+      "fraud_count": 1969,
+      "fraud_rate": 0.03094598205164474
+    }
+  },
+  "process_analysis": [
+    {
+      "stage_order": 1,
+      "stage": "Transaction Initiated",
+      "department": "Payments Operations",
+      "transaction_count": 6362620,
+      "average_processing_time_minutes": 0.5256827867607775,
+      "p95_processing_time_minutes": 0.5584787538759081,
+      "sla_target_minutes": 1.0,
+      "sla_breach_rate": 0.018232347680672428,
+      "simulated_operational_cost_per_transaction": 0.1073949725448293,
+      "simulated_total_operational_cost": 683313.4002131817,
+      "assumption_status": "DERIVED/SIMULATED"
+    },
+    {
+      "stage_order": 2,
+      "stage": "Verification",
+      "department": "Payments Operations",
+      "transaction_count": 6362620,
+      "average_processing_time_minutes": 2.10273114704311,
+      "p95_processing_time_minutes": 2.2339150155036323,
+      "sla_target_minutes": 4.0,
+      "sla_breach_rate": 0.03241306254341765,
+      "simulated_operational_cost_per_transaction": 0.29533617449828053,
+      "simulated_total_operational_cost": 1879111.8505862497,
+      "assumption_status": "DERIVED/SIMULATED"
+    },
+    {
+      "stage_order": 3,
+      "stage": "Risk Assessment",
+      "department": "Financial Crime Operations",
+      "transaction_count": 6362620,
+      "average_processing_time_minutes": 5.256827867607774,
+      "p95_processing_time_minutes": 5.58478753875908,
+      "sla_target_minutes": 8.0,
+      "sla_breach_rate": 0.05570995124649909,
+      "simulated_operational_cost_per_transaction": 0.6443698352689757,
+      "simulated_total_operational_cost": 4099880.4012790904,
+      "assumption_status": "DERIVED/SIMULATED"
+    },
+    {
+      "stage_order": 4,
+      "stage": "Approval",
+      "department": "Payments Operations",
+      "transaction_count": 6362620,
+      "average_processing_time_minutes": 3.6797795073254425,
+      "p95_processing_time_minutes": 3.909351277131356,
+      "sla_target_minutes": 6.0,
+      "sla_breach_rate": 0.04051632817927207,
+      "simulated_operational_cost_per_transaction": 0.4027311470431098,
+      "simulated_total_operational_cost": 2562425.2507994315,
+      "assumption_status": "DERIVED/SIMULATED"
+    },
+    {
+      "stage_order": 5,
+      "stage": "Settlement",
+      "department": "Treasury Operations",
+      "transaction_count": 6362620,
+      "average_processing_time_minutes": 2.628413933803887,
+      "p95_processing_time_minutes": 2.79239376937954,
+      "sla_target_minutes": 5.0,
+      "sla_breach_rate": 0.027348521521008643,
+      "simulated_operational_cost_per_transaction": 0.46985300488362813,
+      "simulated_total_operational_cost": 2989496.12593267,
+      "assumption_status": "DERIVED/SIMULATED"
+    }
+  ],
+  "identified_bottleneck": "Risk Assessment",
+  "operational_data_notice": "Processing times, departments, SLA metrics, and operational costs are DERIVED/SIMULATED analytical assumptions, not PaySim observations or real banking data.",
+  "ml_status": "No fraud model trained in this preprocessing stage."
+}
