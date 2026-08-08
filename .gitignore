@@ -16,6 +16,7 @@ models/*.pkl
 
 # Large generated outputs
 backend/output/*.csv
+!backend/output/process_analysis.csv
 
 # OS/editor
 .DS_Store
