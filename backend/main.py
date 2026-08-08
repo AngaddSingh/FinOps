@@ -182,7 +182,10 @@ def decisions() -> dict[str, Any]:
         raise HTTPException(status_code=500, detail=f"Decision analysis failed: {exc}") from exc
 
 
+PUBLIC_DIR = PROJECT_ROOT / "public"
 FRONTEND_DIR = PROJECT_ROOT / "frontend"
-if FRONTEND_DIR.exists():
+if PUBLIC_DIR.exists():
+    app.mount("/", StaticFiles(directory=PUBLIC_DIR, html=True), name="public")
+elif FRONTEND_DIR.exists():
     app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")
 
