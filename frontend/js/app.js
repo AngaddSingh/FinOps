@@ -26,6 +26,7 @@ const CHART_COLORS = {
 
 document.addEventListener('DOMContentLoaded', async () => {
     setupTabNavigation();
+    setupModalListeners();
     await loadAllData();
 });
 
@@ -249,6 +250,10 @@ function renderTypeDistributionChart(dist) {
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            animation: {
+                duration: 1000,
+                easing: 'easeOutQuart'
+            },
             plugins: {
                 legend: { display: false },
                 tooltip: {
@@ -309,6 +314,10 @@ function renderTransactionTrendChart(trendData) {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                animation: {
+                    duration: 1200,
+                    easing: 'easeOutQuart'
+                },
                 plugins: {
                     legend: { display: false },
                     tooltip: {
@@ -709,7 +718,122 @@ function renderDecisions(data) {
 }
 
 function selectScenario(name) {
-    alert(`Scenario selected: "${name}". In production, this initiates the workflow automation proposal.`);
+    openScenarioModal(name);
+}
+
+/* ==========================================================================
+   SCENARIO MODAL INTERACTION
+   ========================================================================== */
+
+function openScenarioModal(name) {
+    const overlay = document.getElementById('scenario-modal-overlay');
+    const container = document.getElementById('modal-content-body');
+    if (!overlay || !container) return;
+
+    if (!state.decisions || !state.decisions.scenarios) {
+        container.innerHTML = `
+            <div class="modal-framework-box" style="background-color: #FDF2F2; border-color: #F8B4B4;">
+                <div class="modal-framework-title" style="color: #B83232;">UNABLE TO LOAD SCENARIO DETAILS</div>
+                <div class="modal-framework-desc">The decision scenario payload could not be loaded from the backend API.</div>
+            </div>
+        `;
+        overlay.classList.add('active');
+        overlay.setAttribute('aria-hidden', 'false');
+        return;
+    }
+
+    const scenarios = state.decisions.scenarios || [];
+    const recName = state.decisions.recommended_scenario;
+    const targetName = name || recName;
+    const sc = scenarios.find(s => s.scenario === targetName) || scenarios[0];
+    if (!sc) return;
+
+    const isRec = sc.scenario === recName;
+    const score = formatNumber(sc.decision_score, 2);
+    const fullScore = formatNumber(sc.decision_score, 4);
+    const annualSavings = sc.projected_annual_savings;
+    const speedup = sc.projected_processing_time_improvement_percent;
+    const implCost = sc.estimated_implementation_cost;
+    const riskDelta = finiteNumber(sc.risk_impact?.fraud_rate_delta);
+    const weights = sc.score_components?.weights || { efficiency: 0.40, cost: 0.35, risk: 0.25 };
+    const comp = sc.score_components || {};
+
+    container.innerHTML = `
+        <div class="modal-header-row">
+            <div>
+                <span class="modal-badge ${isRec ? 'recommended' : 'simulated'}">
+                    ${isRec ? 'RECOMMENDED DECISION' : 'SIMULATED SCENARIO'}
+                </span>
+                <h2 class="modal-title" id="modal-scenario-title">${sc.scenario}</h2>
+            </div>
+            <div class="modal-score-badge">
+                <div class="modal-score-val">${score}</div>
+                <div class="modal-score-lbl">SCORE (${fullScore})</div>
+            </div>
+        </div>
+
+        <div class="modal-metrics-grid">
+            <div class="modal-metric-card">
+                <div class="modal-metric-val ${annualSavings >= 0 ? 'positive' : 'negative'}">
+                    ${finiteNumber(annualSavings) !== null && annualSavings >= 0 ? '+' : ''}${formatCompactCurrency(annualSavings)}
+                </div>
+                <div class="modal-metric-lbl">Projected Annual Savings (Simulated)</div>
+            </div>
+            <div class="modal-metric-card">
+                <div class="modal-metric-val positive">+${formatNumber(speedup, 2)}%</div>
+                <div class="modal-metric-lbl">Processing Speedup (Simulated)</div>
+            </div>
+            <div class="modal-metric-card">
+                <div class="modal-metric-val">${formatCompactCurrency(implCost)}</div>
+                <div class="modal-metric-lbl">Implementation Cost (Estimated)</div>
+            </div>
+            <div class="modal-metric-card">
+                <div class="modal-metric-val">${formatPercent(riskDelta, 3)}</div>
+                <div class="modal-metric-lbl">Fraud Control Risk Impact</div>
+            </div>
+        </div>
+
+        <div class="modal-framework-box">
+            <div class="modal-framework-title">${isRec ? 'Why This Scenario Was Recommended' : 'Scoring Framework Rationale'}</div>
+            <div class="modal-framework-desc">
+                ${isRec ? 'Selected using a weighted decision score based on efficiency (40%), cost savings (35%), and risk impact (25%).' : (sc.risk_impact?.interpretation || 'Evaluated against portfolio efficiency, operational cost, and fraud control trade-offs.')}
+            </div>
+            <div class="modal-weights-list">
+                <div class="modal-weights-item">Efficiency Weight: <strong>${(weights.efficiency * 100).toFixed(0)}%</strong> (Score: ${formatNumber(comp.efficiency_score, 2)})</div>
+                <div class="modal-weights-item">Cost Savings Weight: <strong>${(weights.cost * 100).toFixed(0)}%</strong> (Score: ${formatNumber(comp.cost_score, 2)})</div>
+                <div class="modal-weights-item">Risk Impact Weight: <strong>${(weights.risk * 100).toFixed(0)}%</strong> (Score: ${formatNumber(comp.risk_score, 2)})</div>
+            </div>
+        </div>
+
+        <div class="simulation-notice">
+            <strong class="notice-tag">PROJECTION DISCLOSURE:</strong>
+            <span>All scenario metrics, financial run rates, and decision scores are model simulations based on PaySim synthetic dataset assumptions.</span>
+        </div>
+    `;
+
+    overlay.classList.add('active');
+    overlay.setAttribute('aria-hidden', 'false');
+}
+
+function closeScenarioModal() {
+    const overlay = document.getElementById('scenario-modal-overlay');
+    if (overlay) {
+        overlay.classList.remove('active');
+        overlay.setAttribute('aria-hidden', 'true');
+    }
+}
+
+function setupModalListeners() {
+    const overlay = document.getElementById('scenario-modal-overlay');
+    if (overlay) {
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closeScenarioModal();
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeScenarioModal();
+    });
 }
 
 /* ==========================================================================
